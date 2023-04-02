@@ -1,0 +1,1 @@
+head_to_nation_championship\startup_stm32f427xx.o: startup_stm32f427xx.s
