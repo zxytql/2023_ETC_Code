@@ -33,5 +33,5 @@ head_to_nation_championship\dji_motor_ctrl.o: ../Drivers/STM32F4xx_HAL_Driver/In
 head_to_nation_championship\dji_motor_ctrl.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 head_to_nation_championship\dji_motor_ctrl.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 head_to_nation_championship\dji_motor_ctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-head_to_nation_championship\dji_motor_ctrl.o: ..\BSP\bsp_can.h
+head_to_nation_championship\dji_motor_ctrl.o: ../BSP/bsp_can.h
 head_to_nation_championship\dji_motor_ctrl.o: ../Core/Inc/can.h

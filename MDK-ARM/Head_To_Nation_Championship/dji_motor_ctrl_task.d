@@ -16,7 +16,7 @@ head_to_nation_championship\dji_motor_ctrl_task.o: ../Middlewares/Third_Party/Fr
 head_to_nation_championship\dji_motor_ctrl_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 head_to_nation_championship\dji_motor_ctrl_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 head_to_nation_championship\dji_motor_ctrl_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-head_to_nation_championship\dji_motor_ctrl_task.o: ..\Motor\DJI_Motor_Ctrl.h
+head_to_nation_championship\dji_motor_ctrl_task.o: ../Motor/DJI_Motor_Ctrl.h
 head_to_nation_championship\dji_motor_ctrl_task.o: ../Core/Inc/main.h
 head_to_nation_championship\dji_motor_ctrl_task.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 head_to_nation_championship\dji_motor_ctrl_task.o: ../Core/Inc/stm32f4xx_hal_conf.h

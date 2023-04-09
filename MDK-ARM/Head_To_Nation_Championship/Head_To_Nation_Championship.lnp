@@ -4,6 +4,7 @@
 "head_to_nation_championship\gpio.o"
 "head_to_nation_championship\freertos.o"
 "head_to_nation_championship\can.o"
+"head_to_nation_championship\tim.o"
 "head_to_nation_championship\stm32f4xx_it.o"
 "head_to_nation_championship\stm32f4xx_hal_msp.o"
 "head_to_nation_championship\stm32f4xx_hal_timebase_tim.o"
@@ -37,6 +38,9 @@
 "head_to_nation_championship\bsp_can.o"
 "head_to_nation_championship\dji_motor_ctrl.o"
 "head_to_nation_championship\dji_motor_ctrl_task.o"
+"head_to_nation_championship\mec_arm_ctrl_task.o"
+"head_to_nation_championship\bsp_servo.o"
+"head_to_nation_championship\mec_arm_math1.o"
 --strict --scatter "Head_To_Nation_Championship\Head_To_Nation_Championship.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

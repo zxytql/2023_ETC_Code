@@ -49,6 +49,7 @@
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId DJI_Motor_Ctrl_Handle;
+osThreadId Mec_Arm_Ctrl_TaHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -57,6 +58,7 @@ osThreadId DJI_Motor_Ctrl_Handle;
 
 void StartDefaultTask(void const * argument);
 void DJI_Motor_Ctrl_Task_Entry(void const * argument);
+void Mec_Arm_Ctrl_Task_Entry(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -111,6 +113,10 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(DJI_Motor_Ctrl_, DJI_Motor_Ctrl_Task_Entry, osPriorityLow, 0, 128);
   DJI_Motor_Ctrl_Handle = osThreadCreate(osThread(DJI_Motor_Ctrl_), NULL);
 
+  /* definition and creation of Mec_Arm_Ctrl_Ta */
+  osThreadDef(Mec_Arm_Ctrl_Ta, Mec_Arm_Ctrl_Task_Entry, osPriorityNormal, 0, 128);
+  Mec_Arm_Ctrl_TaHandle = osThreadCreate(osThread(Mec_Arm_Ctrl_Ta), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -152,6 +158,24 @@ __weak void DJI_Motor_Ctrl_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END DJI_Motor_Ctrl_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Mec_Arm_Ctrl_Task_Entry */
+/**
+* @brief Function implementing the Mec_Arm_Ctrl_Ta thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Mec_Arm_Ctrl_Task_Entry */
+__weak void Mec_Arm_Ctrl_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Mec_Arm_Ctrl_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Mec_Arm_Ctrl_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/
