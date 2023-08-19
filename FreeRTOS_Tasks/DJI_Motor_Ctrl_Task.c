@@ -25,8 +25,10 @@ void DJI_Motor_Ctrl_Task_Entry(void const * argument)
 {
   /* USER CODE BEGIN DJI_Motor_Ctrl_Task_Entry */
 	CanId_Init();
-	DriverInit(0,M_2006,SPEED_CONTROL_MODE);
-	SetSpeed(0,60);
+	DriverInit(0,M_2006,POSITION_CONTROL_MODE);
+	DriverInit(1,M_2006,POSITION_CONTROL_MODE);
+	DriverInit(2,M_2006,POSITION_CONTROL_MODE);
+
   /* Infinite loop */
   for(;;)
   {

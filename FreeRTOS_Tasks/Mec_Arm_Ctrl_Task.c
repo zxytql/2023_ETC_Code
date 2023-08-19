@@ -14,8 +14,8 @@
 #include "bsp_servo.h"
 
 
-int zxy1 = 0;
-int zxy2 = 0;
+int zxy1 = 40;
+int zxy2 = 60;
 
 /* USER CODE BEGIN Header_Mec_Arm_Ctrl_Task_Entry */
 /**
@@ -28,19 +28,31 @@ void Mec_Arm_Ctrl_Task_Entry(void const * argument)
 {
   /* USER CODE BEGIN Mec_Arm_Ctrl_Task_Entry */
 	Servo_Init();
-	
+	//Servo_Ctrl(SERVO_LEFT_NUM,0);
+//	Servo_Ctrl(SERVO_RIGHT_NUM,0);
 	//Mec arm init position
-	Set_Current_XYZ(0,40,10);
+	Set_Current_XYZ(0,40,60);
 	osDelay(1000);
+
 	//--------------------
 	
   /* Infinite loop */
   for(;;)
   {
-		Set_Current_XYZ(0,150,150);
-		osDelay(500);
-		Set_Current_XYZ(0,150,0);
-    osDelay(500);
+		//Move_To(0,160,160,200);
+		Move_To(0,135,140,200);
+		Move_To(0,100,120,200);
+		Move_To(0,90,70,200);
+		Move_To(0,130,50,200);
+		Move_To(0,165,30,200);
+		Move_To(0,180,30,200);
+		
+		Move_To(0,165,30,200);
+		Move_To(0,130,50,200);
+		Move_To(0,90,70,200);
+		Move_To(0,100,120,200);
+		//Move_To(0,135,140,200);
+		osDelay(10);
   }
   /* USER CODE END Mec_Arm_Ctrl_Task_Entry */
 }

@@ -48,8 +48,10 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
-osThreadId DJI_Motor_Ctrl_Handle;
-osThreadId Mec_Arm_Ctrl_TaHandle;
+osThreadId DJI_Motor_TaskHandle;
+osThreadId Mec_Arm_TaskHandle;
+osThreadId Chassis_TaskHandle;
+osThreadId RC_TaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -59,6 +61,8 @@ osThreadId Mec_Arm_Ctrl_TaHandle;
 void StartDefaultTask(void const * argument);
 void DJI_Motor_Ctrl_Task_Entry(void const * argument);
 void Mec_Arm_Ctrl_Task_Entry(void const * argument);
+void Chassis_Task_Entry(void const * argument);
+void RC_Task_Entry(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -109,13 +113,21 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
-  /* definition and creation of DJI_Motor_Ctrl_ */
-  osThreadDef(DJI_Motor_Ctrl_, DJI_Motor_Ctrl_Task_Entry, osPriorityLow, 0, 128);
-  DJI_Motor_Ctrl_Handle = osThreadCreate(osThread(DJI_Motor_Ctrl_), NULL);
+  /* definition and creation of DJI_Motor_Task */
+  osThreadDef(DJI_Motor_Task, DJI_Motor_Ctrl_Task_Entry, osPriorityLow, 0, 128);
+  DJI_Motor_TaskHandle = osThreadCreate(osThread(DJI_Motor_Task), NULL);
 
-  /* definition and creation of Mec_Arm_Ctrl_Ta */
-  osThreadDef(Mec_Arm_Ctrl_Ta, Mec_Arm_Ctrl_Task_Entry, osPriorityNormal, 0, 128);
-  Mec_Arm_Ctrl_TaHandle = osThreadCreate(osThread(Mec_Arm_Ctrl_Ta), NULL);
+  /* definition and creation of Mec_Arm_Task */
+//  osThreadDef(Mec_Arm_Task, Mec_Arm_Ctrl_Task_Entry, osPriorityNormal, 0, 128);
+//  Mec_Arm_TaskHandle = osThreadCreate(osThread(Mec_Arm_Task), NULL);
+
+  /* definition and creation of Chassis_Task */
+  osThreadDef(Chassis_Task, Chassis_Task_Entry, osPriorityNormal, 0, 128);
+  Chassis_TaskHandle = osThreadCreate(osThread(Chassis_Task), NULL);
+
+  /* definition and creation of RC_Task */
+  osThreadDef(RC_Task, RC_Task_Entry, osPriorityHigh, 0, 128);
+  RC_TaskHandle = osThreadCreate(osThread(RC_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -176,6 +188,42 @@ __weak void Mec_Arm_Ctrl_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Mec_Arm_Ctrl_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Chassis_Task_Entry */
+/**
+* @brief Function implementing the Chassis_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Chassis_Task_Entry */
+__weak void Chassis_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Chassis_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Chassis_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_RC_Task_Entry */
+/**
+* @brief Function implementing the RC_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_RC_Task_Entry */
+__weak void RC_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN RC_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END RC_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

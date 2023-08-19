@@ -1,9 +1,9 @@
 Dependencies for Project 'Head_To_Nation_Championship', Target 'Head_To_Nation_Championship': (DO NOT MODIFY !)
-F (startup_stm32f427xx.s)(0x642D508E)(--cpu Cortex-M4.fp -g --apcs=interwork -I ..\Core\Inc-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F427xx SETA 1"--list startup_stm32f427xx.lst --xref -o head_to_nation_championship\startup_stm32f427xx.o --depend head_to_nation_championship\startup_stm32f427xx.d)
-F (../Core/Src/main.c)(0x642D1431)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\main.o --omf_browse head_to_nation_championship\main.crf --depend head_to_nation_championship\main.d)
+F (startup_stm32f427xx.s)(0x64328333)(--cpu Cortex-M4.fp -g --apcs=interwork -I ..\Core\Inc-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F427xx SETA 1"--list startup_stm32f427xx.lst --xref -o head_to_nation_championship\startup_stm32f427xx.o --depend head_to_nation_championship\startup_stm32f427xx.d)
+F (../Core/Src/main.c)(0x64328627)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\main.o --omf_browse head_to_nation_championship\main.crf --depend head_to_nation_championship\main.d)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -32,6 +32,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (../Core/Inc/FreeRTOSConfig.h)(0x64298FCB)
@@ -47,14 +48,18 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
 I (../Core/Inc/can.h)(0x64298FCB)
+I (../Core/Inc/dma.h)(0x64328286)
 I (../Core/Inc/tim.h)(0x642D1430)
+I (../Core/Inc/usart.h)(0x64328286)
 I (../Core/Inc/gpio.h)(0x64298FCA)
 I (../BSP/bsp_can.h)(0x6400B394)
-F (../Core/Src/gpio.c)(0x642D142E)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\gpio.o --omf_browse head_to_nation_championship\gpio.crf --depend head_to_nation_championship\gpio.d)
+I (../BSP/bsp_usart.h)(0x64328479)
+I (../BSP/bsp_ops.h)(0x62CD2402)
+F (../Core/Src/gpio.c)(0x64328284)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\gpio.o --omf_browse head_to_nation_championship\gpio.crf --depend head_to_nation_championship\gpio.d)
 I (../Core/Inc/gpio.h)(0x64298FCA)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -83,7 +88,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Core/Src/freertos.c)(0x642D1430)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\freertos.o --omf_browse head_to_nation_championship\freertos.crf --depend head_to_nation_championship\freertos.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Core/Src/freertos.c)(0x64572AEF)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\freertos.o --omf_browse head_to_nation_championship\freertos.crf --depend head_to_nation_championship\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
@@ -97,7 +103,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -124,16 +130,17 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
-F (../Core/Src/can.c)(0x64298FCB)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\can.o --omf_browse head_to_nation_championship\can.crf --depend head_to_nation_championship\can.d)
+F (../Core/Src/can.c)(0x64298FCB)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\can.o --omf_browse head_to_nation_championship\can.crf --depend head_to_nation_championship\can.d)
 I (../Core/Inc/can.h)(0x64298FCB)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -162,11 +169,46 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Core/Src/tim.c)(0x642D1430)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\tim.o --omf_browse head_to_nation_championship\tim.crf --depend head_to_nation_championship\tim.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Core/Src/dma.c)(0x64328286)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\dma.o --omf_browse head_to_nation_championship\dma.crf --depend head_to_nation_championship\dma.d)
+I (../Core/Inc/dma.h)(0x64328286)
+I (../Core/Inc/main.h)(0x64298FCC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Core/Src/tim.c)(0x642D1430)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\tim.o --omf_browse head_to_nation_championship\tim.crf --depend head_to_nation_championship\tim.d)
 I (../Core/Inc/tim.h)(0x642D1430)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -195,10 +237,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Core/Src/stm32f4xx_it.c)(0x64298FCB)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_it.o --omf_browse head_to_nation_championship\stm32f4xx_it.crf --depend head_to_nation_championship\stm32f4xx_it.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Core/Src/usart.c)(0x64328286)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\usart.o --omf_browse head_to_nation_championship\usart.crf --depend head_to_nation_championship\usart.d)
+I (../Core/Inc/usart.h)(0x64328286)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -227,11 +271,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_it.h)(0x64298FCB)
-F (../Core/Src/stm32f4xx_hal_msp.c)(0x64298FCB)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_msp.o --omf_browse head_to_nation_championship\stm32f4xx_hal_msp.crf --depend head_to_nation_championship\stm32f4xx_hal_msp.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Core/Src/stm32f4xx_it.c)(0x64328557)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_it.o --omf_browse head_to_nation_championship\stm32f4xx_it.crf --depend head_to_nation_championship\stm32f4xx_it.d)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -260,9 +304,15 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Core/Src/stm32f4xx_hal_timebase_tim.c)(0x64298FCC)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_timebase_tim.o --omf_browse head_to_nation_championship\stm32f4xx_hal_timebase_tim.crf --depend head_to_nation_championship\stm32f4xx_hal_timebase_tim.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_it.h)(0x64328286)
+I (../BSP/bsp_usart.h)(0x64328479)
+I (../Core/Inc/usart.h)(0x64328286)
+I (../BSP/bsp_ops.h)(0x62CD2402)
+F (../Core/Src/stm32f4xx_hal_msp.c)(0x64298FCB)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_msp.o --omf_browse head_to_nation_championship\stm32f4xx_hal_msp.crf --depend head_to_nation_championship\stm32f4xx_hal_msp.d)
+I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -291,9 +341,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_can.o --omf_browse head_to_nation_championship\stm32f4xx_hal_can.crf --depend head_to_nation_championship\stm32f4xx_hal_can.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Core/Src/stm32f4xx_hal_timebase_tim.c)(0x64298FCC)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_timebase_tim.o --omf_browse head_to_nation_championship\stm32f4xx_hal_timebase_tim.crf --depend head_to_nation_championship\stm32f4xx_hal_timebase_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -322,9 +373,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_rcc.o --omf_browse head_to_nation_championship\stm32f4xx_hal_rcc.crf --depend head_to_nation_championship\stm32f4xx_hal_rcc.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_can.o --omf_browse head_to_nation_championship\stm32f4xx_hal_can.crf --depend head_to_nation_championship\stm32f4xx_hal_can.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -353,9 +405,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_rcc_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_rcc_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_rcc_ex.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_rcc.o --omf_browse head_to_nation_championship\stm32f4xx_hal_rcc.crf --depend head_to_nation_championship\stm32f4xx_hal_rcc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -384,9 +437,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_flash.o --omf_browse head_to_nation_championship\stm32f4xx_hal_flash.crf --depend head_to_nation_championship\stm32f4xx_hal_flash.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_rcc_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_rcc_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_rcc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -415,9 +469,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_flash_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_flash_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_flash_ex.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_flash.o --omf_browse head_to_nation_championship\stm32f4xx_hal_flash.crf --depend head_to_nation_championship\stm32f4xx_hal_flash.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -446,9 +501,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_flash_ramfunc.o --omf_browse head_to_nation_championship\stm32f4xx_hal_flash_ramfunc.crf --depend head_to_nation_championship\stm32f4xx_hal_flash_ramfunc.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_flash_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_flash_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_flash_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -477,9 +533,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_gpio.o --omf_browse head_to_nation_championship\stm32f4xx_hal_gpio.crf --depend head_to_nation_championship\stm32f4xx_hal_gpio.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_flash_ramfunc.o --omf_browse head_to_nation_championship\stm32f4xx_hal_flash_ramfunc.crf --depend head_to_nation_championship\stm32f4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -508,9 +565,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_dma_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_dma_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_dma_ex.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_gpio.o --omf_browse head_to_nation_championship\stm32f4xx_hal_gpio.crf --depend head_to_nation_championship\stm32f4xx_hal_gpio.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -539,9 +597,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_dma.o --omf_browse head_to_nation_championship\stm32f4xx_hal_dma.crf --depend head_to_nation_championship\stm32f4xx_hal_dma.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_dma_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_dma_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_dma_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -570,9 +629,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_pwr.o --omf_browse head_to_nation_championship\stm32f4xx_hal_pwr.crf --depend head_to_nation_championship\stm32f4xx_hal_pwr.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_dma.o --omf_browse head_to_nation_championship\stm32f4xx_hal_dma.crf --depend head_to_nation_championship\stm32f4xx_hal_dma.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -601,9 +661,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_pwr_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_pwr_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_pwr_ex.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_pwr.o --omf_browse head_to_nation_championship\stm32f4xx_hal_pwr.crf --depend head_to_nation_championship\stm32f4xx_hal_pwr.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -632,9 +693,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_cortex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_cortex.crf --depend head_to_nation_championship\stm32f4xx_hal_cortex.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_pwr_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_pwr_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_pwr_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -663,9 +725,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal.o --omf_browse head_to_nation_championship\stm32f4xx_hal.crf --depend head_to_nation_championship\stm32f4xx_hal.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_cortex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_cortex.crf --depend head_to_nation_championship\stm32f4xx_hal_cortex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -694,9 +757,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_exti.o --omf_browse head_to_nation_championship\stm32f4xx_hal_exti.crf --depend head_to_nation_championship\stm32f4xx_hal_exti.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal.o --omf_browse head_to_nation_championship\stm32f4xx_hal.crf --depend head_to_nation_championship\stm32f4xx_hal.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -725,9 +789,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_tim.o --omf_browse head_to_nation_championship\stm32f4xx_hal_tim.crf --depend head_to_nation_championship\stm32f4xx_hal_tim.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_exti.o --omf_browse head_to_nation_championship\stm32f4xx_hal_exti.crf --depend head_to_nation_championship\stm32f4xx_hal_exti.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -756,9 +821,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_tim_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_tim_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_tim_ex.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_tim.o --omf_browse head_to_nation_championship\stm32f4xx_hal_tim.crf --depend head_to_nation_championship\stm32f4xx_hal_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -787,7 +853,72 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Core/Src/system_stm32f4xx.c)(0x636F5B3A)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\system_stm32f4xx.o --omf_browse head_to_nation_championship\system_stm32f4xx.crf --depend head_to_nation_championship\system_stm32f4xx.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_tim_ex.o --omf_browse head_to_nation_championship\stm32f4xx_hal_tim_ex.crf --depend head_to_nation_championship\stm32f4xx_hal_tim_ex.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c)(0x636F5B5B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stm32f4xx_hal_uart.o --omf_browse head_to_nation_championship\stm32f4xx_hal_uart.crf --depend head_to_nation_championship\stm32f4xx_hal_uart.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Core/Src/system_stm32f4xx.c)(0x636F5B3A)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\system_stm32f4xx.o --omf_browse head_to_nation_championship\system_stm32f4xx.crf --depend head_to_nation_championship\system_stm32f4xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
@@ -798,7 +929,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
@@ -818,7 +949,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\croutine.o --omf_browse head_to_nation_championship\croutine.crf --depend head_to_nation_championship\croutine.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\croutine.o --omf_browse head_to_nation_championship\croutine.crf --depend head_to_nation_championship\croutine.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
@@ -831,7 +963,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\event_groups.o --omf_browse head_to_nation_championship\event_groups.crf --depend head_to_nation_championship\event_groups.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\event_groups.o --omf_browse head_to_nation_championship\event_groups.crf --depend head_to_nation_championship\event_groups.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
@@ -846,7 +978,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/list.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\list.o --omf_browse head_to_nation_championship\list.crf --depend head_to_nation_championship\list.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/list.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\list.o --omf_browse head_to_nation_championship\list.crf --depend head_to_nation_championship\list.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
@@ -858,7 +990,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/queue.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\queue.o --omf_browse head_to_nation_championship\queue.crf --depend head_to_nation_championship\queue.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/queue.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\queue.o --omf_browse head_to_nation_championship\queue.crf --depend head_to_nation_championship\queue.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
@@ -873,7 +1005,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stream_buffer.o --omf_browse head_to_nation_championship\stream_buffer.crf --depend head_to_nation_championship\stream_buffer.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\stream_buffer.o --omf_browse head_to_nation_championship\stream_buffer.crf --depend head_to_nation_championship\stream_buffer.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
@@ -887,7 +1019,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/tasks.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\tasks.o --omf_browse head_to_nation_championship\tasks.crf --depend head_to_nation_championship\tasks.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/tasks.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\tasks.o --omf_browse head_to_nation_championship\tasks.crf --depend head_to_nation_championship\tasks.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
@@ -903,7 +1035,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/timers.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\timers.o --omf_browse head_to_nation_championship\timers.crf --depend head_to_nation_championship\timers.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/timers.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\timers.o --omf_browse head_to_nation_championship\timers.crf --depend head_to_nation_championship\timers.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
@@ -918,7 +1050,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\cmsis_os.o --omf_browse head_to_nation_championship\cmsis_os.crf --depend head_to_nation_championship\cmsis_os.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\cmsis_os.o --omf_browse head_to_nation_championship\cmsis_os.crf --depend head_to_nation_championship\cmsis_os.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
@@ -937,7 +1069,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
-F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\heap_4.o --omf_browse head_to_nation_championship\heap_4.crf --depend head_to_nation_championship\heap_4.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\heap_4.o --omf_browse head_to_nation_championship\heap_4.crf --depend head_to_nation_championship\heap_4.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
@@ -950,7 +1082,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
-F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\port.o --omf_browse head_to_nation_championship\port.crf --depend head_to_nation_championship\port.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c)(0x636F5B3F)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\port.o --omf_browse head_to_nation_championship\port.crf --depend head_to_nation_championship\port.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
@@ -962,12 +1094,12 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
-F (..\BSP\bsp_can.c)(0x6400B60A)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\bsp_can.o --omf_browse head_to_nation_championship\bsp_can.crf --depend head_to_nation_championship\bsp_can.d)
+F (..\BSP\bsp_can.c)(0x6400B60A)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\bsp_can.o --omf_browse head_to_nation_championship\bsp_can.crf --depend head_to_nation_championship\bsp_can.d)
 I (..\BSP\bsp_can.h)(0x6400B394)
 I (../Core/Inc/can.h)(0x64298FCB)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -996,12 +1128,50 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-F (..\Motor\DJI_Motor_Ctrl.c)(0x64299BE2)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\dji_motor_ctrl.o --omf_browse head_to_nation_championship\dji_motor_ctrl.crf --depend head_to_nation_championship\dji_motor_ctrl.d)
+F (..\BSP\bsp_usart.c)(0x643284D3)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\bsp_usart.o --omf_browse head_to_nation_championship\bsp_usart.crf --depend head_to_nation_championship\bsp_usart.d)
+I (..\BSP\bsp_usart.h)(0x64328479)
+I (../Core/Inc/usart.h)(0x64328286)
+I (../Core/Inc/main.h)(0x64298FCC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+I (..\BSP\bsp_ops.h)(0x62CD2402)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+F (..\Motor\DJI_Motor_Ctrl.c)(0x64573B3A)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\dji_motor_ctrl.o --omf_browse head_to_nation_championship\dji_motor_ctrl.crf --depend head_to_nation_championship\dji_motor_ctrl.d)
 I (..\Motor\DJI_Motor_Ctrl.h)(0x64062415)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -1030,10 +1200,61 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
 I (../BSP/bsp_can.h)(0x6400B394)
 I (../Core/Inc/can.h)(0x64298FCB)
-F (..\FreeRTOS_Tasks\DJI_Motor_Ctrl_Task.c)(0x64299A28)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\dji_motor_ctrl_task.o --omf_browse head_to_nation_championship\dji_motor_ctrl_task.crf --depend head_to_nation_championship\dji_motor_ctrl_task.d)
+F (..\Motor\OD_CAN_Com.c)(0x6432891A)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\od_can_com.o --omf_browse head_to_nation_championship\od_can_com.crf --depend head_to_nation_championship\od_can_com.d)
+I (..\Motor\OD_CAN_Com.h)(0x645727AA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (../Core/Inc/can.h)(0x64298FCB)
+I (../Core/Inc/main.h)(0x64298FCC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
+I (../Core/Inc/FreeRTOSConfig.h)(0x64298FCB)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
+F (..\FreeRTOS_Tasks\DJI_Motor_Ctrl_Task.c)(0x645727AA)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\dji_motor_ctrl_task.o --omf_browse head_to_nation_championship\dji_motor_ctrl_task.crf --depend head_to_nation_championship\dji_motor_ctrl_task.d)
 I (..\FreeRTOS_Tasks\DJI_Motor_Ctrl_Task.h)(0x642995EE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
@@ -1054,7 +1275,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F
 I (../Motor/DJI_Motor_Ctrl.h)(0x64062415)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -1081,8 +1302,67 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-F (..\FreeRTOS_Tasks\Mec_Arm_Ctrl_Task.c)(0x642E65AF)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\mec_arm_ctrl_task.o --omf_browse head_to_nation_championship\mec_arm_ctrl_task.crf --depend head_to_nation_championship\mec_arm_ctrl_task.d)
+F (..\FreeRTOS_Tasks\Chassis_Task.c)(0x6457307D)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\chassis_task.o --omf_browse head_to_nation_championship\chassis_task.crf --depend head_to_nation_championship\chassis_task.d)
+I (..\FreeRTOS_Tasks\Chassis_Task.h)(0x64572276)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (../Core/Inc/FreeRTOSConfig.h)(0x64298FCB)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
+I (../Motor/OD_CAN_Com.h)(0x645727AA)
+I (../Core/Inc/can.h)(0x64298FCB)
+I (../Core/Inc/main.h)(0x64298FCC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+I (..\Chassis\simple_filter.h)(0x62C6897C)
+I (..\FreeRTOS_Tasks\RC_Task.h)(0x64328627)
+I (../BSP/bsp_usart.h)(0x64328479)
+I (../Core/Inc/usart.h)(0x64328286)
+I (../BSP/bsp_ops.h)(0x62CD2402)
+I (..\Chassis\Helm_wheel.h)(0x645727AA)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
+I (../Motor/DJI_Motor_Ctrl.h)(0x64062415)
+F (..\FreeRTOS_Tasks\Mec_Arm_Ctrl_Task.c)(0x6441EBC8)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\mec_arm_ctrl_task.o --omf_browse head_to_nation_championship\mec_arm_ctrl_task.crf --depend head_to_nation_championship\mec_arm_ctrl_task.d)
 I (..\FreeRTOS_Tasks\Mec_Arm_Ctrl_Task.h)(0x642D698D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
@@ -1100,13 +1380,13 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
-I (../Servo/mec_arm_math1.h)(0x642E62BD)
+I (../Servo/mec_arm_math1.h)(0x64409DB2)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (../BSP/bsp_servo.h)(0x6408694B)
+I (../BSP/bsp_servo.h)(0x6440CAAB)
 I (../Core/Inc/tim.h)(0x642D1430)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -1133,12 +1413,64 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (..\Servo\bsp_servo.c)(0x642D49F7)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\bsp_servo.o --omf_browse head_to_nation_championship\bsp_servo.crf --depend head_to_nation_championship\bsp_servo.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (..\FreeRTOS_Tasks\RC_Task.c)(0x643284D3)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\rc_task.o --omf_browse head_to_nation_championship\rc_task.crf --depend head_to_nation_championship\rc_task.d)
+I (..\FreeRTOS_Tasks\RC_Task.h)(0x64328627)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (../BSP/bsp_usart.h)(0x64328479)
+I (../Core/Inc/usart.h)(0x64328286)
+I (../Core/Inc/main.h)(0x64298FCC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x636F5B3A)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x636F5B3C)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x636F5B3A)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x636F5B5B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+I (../BSP/bsp_ops.h)(0x62CD2402)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
+I (../Core/Inc/FreeRTOSConfig.h)(0x64298FCB)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x636F5B3F)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x636F5B3F)
+F (..\Servo\bsp_servo.c)(0x642D49F7)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\bsp_servo.o --omf_browse head_to_nation_championship\bsp_servo.crf --depend head_to_nation_championship\bsp_servo.d)
 I (..\Servo\bsp_servo.h)(0x642D49F7)
 I (../Core/Inc/tim.h)(0x642D1430)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -1167,8 +1499,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
-F (..\Servo\mec_arm_math1.c)(0x642E6399)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\mec_arm_math1.o --omf_browse head_to_nation_championship\mec_arm_math1.crf --depend head_to_nation_championship\mec_arm_math1.d)
-I (..\Servo\mec_arm_math1.h)(0x642E62BD)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (..\Servo\mec_arm_math1.c)(0x64562347)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\mec_arm_math1.o --omf_browse head_to_nation_championship\mec_arm_math1.crf --depend head_to_nation_championship\mec_arm_math1.d)
+I (..\Servo\mec_arm_math1.h)(0x64409DB2)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x636F5B3F)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x636F5B3F)
@@ -1190,7 +1523,7 @@ I (..\Servo\bsp_servo.h)(0x642D49F7)
 I (../Core/Inc/tim.h)(0x642D1430)
 I (../Core/Inc/main.h)(0x64298FCC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x636F5B5B)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x642D508B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x64328330)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x636F5B5B)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x636F5B3A)
@@ -1217,3 +1550,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x636F5B5B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x636F5B5B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x636F5B5B)
+F (..\Chassis\simple_filter.c)(0x62C5469C)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\simple_filter.o --omf_browse head_to_nation_championship\simple_filter.crf --depend head_to_nation_championship\simple_filter.d)
+I (..\Chassis\simple_filter.h)(0x62C6897C)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
+F (..\Chassis\Helm_wheel.c)(0x64572961)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../Motor -I ../FreeRTOS_Tasks -I ../Servo -I ..\Chassis-I.\RTE\_Head_To_Nation_Championship-IC:\Users\zxy\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\zxy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -D__TARGET_FPU_VFP -DARM_MATH_CM4 -D__CC_ARM -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o head_to_nation_championship\helm_wheel.o --omf_browse head_to_nation_championship\helm_wheel.crf --depend head_to_nation_championship\helm_wheel.d)
+I (..\Chassis\Helm_wheel.h)(0x645727AA)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)

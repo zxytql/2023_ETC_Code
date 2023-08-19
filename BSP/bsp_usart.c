@@ -71,7 +71,7 @@
 uint8_t usart1_buff[USART1_BUFFLEN];
 //uint8_t usart2_buff[USART2_BUFFLEN];
 //uint8_t usart3_buff[USART3_BUFFLEN];
-uint8_t usart6_buff[USART6_BUFFLEN];
+//uint8_t usart6_buff[USART6_BUFFLEN];
 //uint8_t uart7_buff[UART7_BUFFLEN];
 //uint8_t uart8_buff[UART8_BUFFLEN];
 
@@ -130,15 +130,15 @@ void Usart_IdleIRQ_Init(UART_HandleTypeDef *huart)
 				uart_receive_dma_no_it(&huart1,usart1_buff,USART1_MAX_LEN);
         //HAL_UART_Receive_DMA(&huart1, usart1_buff, USART1_MAX_LEN);
     }
-    else if (USART6 == huart->Instance)
-    {
-				__HAL_UART_CLEAR_IDLEFLAG(&huart6);
-        /** 使能串口中断 **/
-        __HAL_UART_ENABLE_IT(&huart6, UART_IT_IDLE);
-        /** 开启DMA接收 **/
-				uart_receive_dma_no_it(&huart6,usart6_buff,USART6_MAX_LEN);
-        //HAL_UART_Receive_DMA(&huart7, uart7_buff, UART7_MAX_LEN);
-    }
+//    else if (USART6 == huart->Instance)
+//    {
+//				__HAL_UART_CLEAR_IDLEFLAG(&huart6);
+//        /** 使能串口中断 **/
+//        __HAL_UART_ENABLE_IT(&huart6, UART_IT_IDLE);
+//        /** 开启DMA接收 **/
+//				uart_receive_dma_no_it(&huart6,usart6_buff,USART6_MAX_LEN);
+//        //HAL_UART_Receive_DMA(&huart7, uart7_buff, UART7_MAX_LEN);
+//    }
 //    else if (UART8 == huart->Instance)
 //    {
 //			  /* 清除空闲中断标志位 */
@@ -205,7 +205,7 @@ void Uart6_Idle_Callback(uint8_t *buff)
 //	static int i = 0;
 //	if(i > 10) {HAL_UART_Transmit(&huart6,buff,28,0xffff);i = 0;}
 //	else {i++;}	
-	Ops_Frame_Parse(&ops_data,buff);
+	//Ops_Frame_Parse(&ops_data,buff);
 	//Pc_Send_Data(&ops_data, buff);  //HAL_UART_Transmit_IT(&huart7,buff,28);
 	
 }
@@ -237,15 +237,15 @@ void Usart_IdleIRQ_Callback(UART_HandleTypeDef *huart)
         //HAL_UART_Receive_DMA(huart, usart1_buff, USART1_MAX_LEN);
         __HAL_DMA_SET_COUNTER(huart->hdmarx,USART1_MAX_LEN);
     }
-    else if (USART6 == huart->Instance)
-    {
-			zxy111 = __HAL_DMA_GET_COUNTER(huart->hdmarx);
-        if (USART6_BUFFLEN == USART6_MAX_LEN - __HAL_DMA_GET_COUNTER(huart->hdmarx))
-        {
-            Uart6_Idle_Callback(usart6_buff);
-        }
-        __HAL_DMA_SET_COUNTER(huart->hdmarx,USART6_MAX_LEN);
-    }
+//    else if (USART6 == huart->Instance)
+//    {
+//			zxy111 = __HAL_DMA_GET_COUNTER(huart->hdmarx);
+//        if (USART6_BUFFLEN == USART6_MAX_LEN - __HAL_DMA_GET_COUNTER(huart->hdmarx))
+//        {
+//            Uart6_Idle_Callback(usart6_buff);
+//        }
+//        __HAL_DMA_SET_COUNTER(huart->hdmarx,USART6_MAX_LEN);
+//    }
 //    else if (UART8 == huart->Instance)
 //    {
 //				zxy111 = __HAL_DMA_GET_COUNTER(huart->hdmarx);

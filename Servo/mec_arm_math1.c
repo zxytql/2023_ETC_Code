@@ -45,7 +45,7 @@ void Set_Current_Angle(double theta_1, double theta_2, double theta_3)
 	Servo_Ctrl(SERVO_LEFT_NUM,theta_2);
 	Servo_Ctrl(SERVO_RIGHT_NUM,theta_3);
 	
-	// refresh logical servo angle cache
+	// 刷新角度
 	cur_rot = theta_1;
 	cur_left = theta_2;
 	cur_right = theta_3;
@@ -57,7 +57,7 @@ void Set_Current_XYZ(double x, double y, double z)
 	
 		Set_Current_Angle(tgt_rot, tgt_left, tgt_right);		
 		
-		//Flash the current values
+		//刷新位置
 		y_cur = y;
 		z_cur = z;
 }
@@ -79,7 +79,7 @@ void Interpolate_YZ(interpolate_param_t *ptr, double y_cur, double z_cur, double
 	ptr->z_c = pow(time,-2) * (3 * (z_tgt - z_cur)) - (2 * v_begin + v_end) / time;
 	ptr->z_d = -pow(time,-3) * (2 * (z_tgt - z_cur)) + (v_end + v_begin) / pow(time,2);	
 	
-	INTERP_INTVLS = time / 20; //Servo control frequency is 50Hz, 20ms.
+	INTERP_INTVLS = time / 20; //舵机控制周期为50Hz -> 20ms
 	
 	for(int i = 0; i < (int)INTERP_INTVLS; ++i)
 	{
@@ -99,7 +99,7 @@ void Move_To(double x, double y, double z, double time)
 		Coordinate_To_Angle(x, y, z, &tgt_rot, &tgt_left, &tgt_right);
 		Interpolate_YZ(&interpolate_param,y_cur,z_cur,y,z,time);
 
-		Set_Current_Angle(tgt_rot, tgt_left, tgt_right);
+		Set_Current_XYZ(x,y,z);
 }
 
 
