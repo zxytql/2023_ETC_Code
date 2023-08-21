@@ -29,6 +29,7 @@
 /****TEST VIR*****/
 int test1 = 0;
 int test2 = 0;
+int test_hal = 0;
 
 /******** Global Variables *********/
 DriverType Driver[8];
@@ -158,10 +159,10 @@ void MotorCtrl(void)
         else
             PerCur[i] = 0.0f;
     }
-    if (!PerCur[0] || !PerCur[1] || !PerCur[2] || !PerCur[3])
-    {
+//    if (!PerCur[0] || !PerCur[1] || !PerCur[2] || !PerCur[3])
+//    {
         SetCur((int16_t) PerCur[0], (int16_t) PerCur[1], (int16_t) PerCur[2], (int16_t) PerCur[3]);
-    }
+//    }
     if (!PerCur[4] || !PerCur[5] || !PerCur[6] || !PerCur[7])
     {
         SetCur1((int16_t) PerCur[4], (int16_t) PerCur[5], (int16_t) PerCur[6], (int16_t) PerCur[7]);
@@ -198,7 +199,10 @@ void SetCur(int16_t MotorCur0, int16_t MotorCur1, int16_t MotorCur2, int16_t Mot
     TxMessage[7] = MotorCur3;
 
     //CAN_Transmit_Messages_Byte(&hcan1,TxHeader.StdId,TxMessage[0],TxMessage[1],TxMessage[2],TxMessage[3],TxMessage[4],TxMessage[5],TxMessage[6],TxMessage[7]);
-    HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxMessage, &TxMailbox);
+    if(HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxMessage, &TxMailbox) != HAL_OK)
+		{
+			test_hal++;
+		}
 }
 
 /**

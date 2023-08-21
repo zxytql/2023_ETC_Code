@@ -38,4 +38,9 @@ void Ops_Set_Yaw(float yaw);
 void Ops_Waiting(void);
 void Ops_Stract(uint8_t strDestination[], uint8_t strSource[], int num);
 void Ops_Set_Zero(void);
+
+float Ops_Get_X(void);
+float Ops_Get_Y(void);
+float Ops_Get_Yaw(void);
+float Ops_Get_Yaw_Speed(void);
 #endif

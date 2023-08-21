@@ -13,14 +13,17 @@
 #include "OD_CAN_Com.h"
 #include "simple_filter.h"
 #include "RC_Task.h"
-#include "Helm_wheel.h"
 #include "DJI_Motor_Ctrl.h"
+#include "mcknum_wheel.h"
+#include "task_flow.h"
+
 
 /**** Global Variables ****/
 float debug_vx = 0;
 float debug_vy = 0;
 float debug_w  = 0;
 chassis_t chassis;
+float g_zxy1 = 0;
 
 /******** Acc Filters ********/
 first_order_filter_type_t rc_vx_slow_fliter; //遥控vx加速度平滑
@@ -42,54 +45,76 @@ const static float chassis_vy_order_filter[1] = { 0.2f };
 void Chassis_Task_Entry(void const * argument)
 {
   /* USER CODE BEGIN Chassis_Task_Entry */
-	osDelay(4000);
-	OD_Axis_Init();
-	
 	  //一阶滤波器参数初始化填充
   first_order_filter_init(&rc_vx_slow_fliter, 0.01f, chassis_vx_order_filter);
   first_order_filter_init(&rc_vy_slow_fliter, 0.01f, chassis_vy_order_filter);
-//  first_order_filter_init(&rc_wz_slow_fliter, 0.01f, chassis_wz_order_filter);
-	helm_chassis_init(CHASSIS_COORDINATE);
-	
+
   /* Infinite loop */
   for(;;)
   {
-		//键值映射到底盘速度
-		debug_vx = rc.rc_KeyValue.left_vir_roll/300.0f;
-		debug_vy = rc.rc_KeyValue.right_vir_roll/300.0f;
-		debug_w = rc.rc_KeyValue.left_horz_roll/7.0f;
+		if(task_flow.chassis_ctrl_mode == REMOTE_CTRL_MODE)
+		{
+		//遥控器键值映射到底盘速度
+			debug_vx = -rc.rc_KeyValue.right_vir_roll/200.0f;
+			debug_vy = -rc.rc_KeyValue.right_horz_roll/200.0f;
+			debug_w = -rc.rc_KeyValue.left_horz_roll/28.0f;
 		
-		first_order_filter_cali(&rc_vx_slow_fliter, debug_vx);
-		first_order_filter_cali(&rc_vy_slow_fliter, debug_vy);
+			first_order_filter_cali(&rc_vx_slow_fliter, debug_vx);
+			first_order_filter_cali(&rc_vy_slow_fliter, debug_vy);
+
+			chassis.chassis_ct.ct_vx = rc_vx_slow_fliter.out;
+			chassis.chassis_ct.ct_vy = rc_vy_slow_fliter.out;
+			chassis.chassis_ct.ct_wz = debug_w;
+		}
+		else if(task_flow.chassis_ctrl_mode == NAVIGATION_MODE)
+		{
+			chassis.chassis_ct.ct_vx = nav_vel.vx;
+			chassis.chassis_ct.ct_vy = nav_vel.vy;
+			chassis.chassis_ct.ct_wz = nav_vel.ang_w;
+		}
+		else if(task_flow.chassis_ctrl_mode == START_UP_MODE)
+		{
+			// START_UP_MODE是为了防止在开机时瞬间接入遥控器数据导致底盘电机抽动
+			// 在2S后, task_flow.c中会自动切换会REMOTE_CTRL_MODE并发出声音
+			chassis.chassis_ct.ct_vx = 0;
+			chassis.chassis_ct.ct_vy = 0;
+			chassis.chassis_ct.ct_wz = 0;			
+		}
+		/** 死区限制 **/
+		if(chassis.chassis_ct.ct_vx < 0.01f && chassis.chassis_ct.ct_vx > -0.01f)
+		{
+			chassis.chassis_ct.ct_vx = 0;
+		}
+		if(chassis.chassis_ct.ct_vy < 0.01f && chassis.chassis_ct.ct_vy > -0.01f)
+		{
+			chassis.chassis_ct.ct_vy = 0;
+		}
 		
-		chassis.chassis_ct.ct_vx = rc_vx_slow_fliter.out;
-		chassis.chassis_ct.ct_vy = rc_vy_slow_fliter.out;
+		Global_Cor_Trans(&chassis); //转全局坐标系控制
+		Mcknum_Kinematic_Inverse(&chassis); //运动学逆解
 		
-		helm_chassis_control(chassis.chassis_ct.ct_vx, chassis.chassis_ct.ct_vy, debug_w, &helm_chassis);
+		//这里的符号与运动学无关，只是反转电机转向
+		SetSpeed(0,chassis.wheel_speed[0]);
+		SetSpeed(1,chassis.wheel_speed[1]);
+		SetSpeed(2,-chassis.wheel_speed[2]);
+		SetSpeed(3,-chassis.wheel_speed[3]);
 		
-		OD_Set_Input_Vel(OD_AXIS1,Speed2Rpm(helm_chassis.wheel1.v_target)/60.0f);
-		OD_Set_Input_Vel(OD_AXIS2,Speed2Rpm(helm_chassis.wheel2.v_target)/60.0f);
-		OD_Set_Input_Vel(OD_AXIS3,Speed2Rpm(helm_chassis.wheel3.v_target)/60.0f);
-//		
-		SetPos(0,(helm_chassis.wheel1.angle_target/360)*2.5f*8192*36);
-		SetPos(1,(helm_chassis.wheel2.angle_target/360)*2.5f*8192*36);
-		SetPos(2,(helm_chassis.wheel3.angle_target/360)*2.5f*8192*36);
-    osDelay(3);
+    osDelay(5);
   }
   /* USER CODE END Chassis_Task_Entry */
 }
 
-void OD_Axis_Init(void)
+void Global_Cor_Trans(chassis_t *ptr)
 {
-	OD_Clear_Errors(OD_AXIS1);
-	OD_Set_Ctrl_Mode(OD_AXIS1,CONTROL_MODE_VELOCITY_CONTROL,INPUT_MODE_PASSTHROUGH);
-	OD_Axis_Set_CloseLoop(OD_AXIS1);	
+	float vx;
+	float vy;
+	float vx_input = ptr->chassis_ct.ct_vx;
+	float vy_input = ptr->chassis_ct.ct_vy;
 	
-	OD_Clear_Errors(OD_AXIS2);
-	OD_Set_Ctrl_Mode(OD_AXIS2,CONTROL_MODE_VELOCITY_CONTROL,INPUT_MODE_PASSTHROUGH);
-	OD_Axis_Set_CloseLoop(OD_AXIS2);	
+	ptr->chassis_ct.ct_yaw = Ops_Get_Yaw();
+	vx = vx_input*cosf(ANGLE2RAD(-ptr->chassis_ct.ct_yaw)) - vy_input*sinf(ANGLE2RAD(-ptr->chassis_ct.ct_yaw));
+	vy = vy_input*cosf(ANGLE2RAD(-ptr->chassis_ct.ct_yaw)) + vx_input*sinf(ANGLE2RAD(-ptr->chassis_ct.ct_yaw));
 	
-	OD_Clear_Errors(OD_AXIS3);
-	OD_Set_Ctrl_Mode(OD_AXIS3,CONTROL_MODE_VELOCITY_CONTROL,INPUT_MODE_PASSTHROUGH);
-	OD_Axis_Set_CloseLoop(OD_AXIS3);	
+	ptr->chassis_ct.ct_vx = vx;
+	ptr->chassis_ct.ct_vy = vy;
 }

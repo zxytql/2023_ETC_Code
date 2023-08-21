@@ -73,7 +73,7 @@ void Ops_Waiting(void)
     } while (ops_data.val[Yaw_speed] == 0.0f);
 
     //ActionDoneBuzzer();
-    Ops_Calibration();
+//    Ops_Calibration();
 
 }
 
@@ -249,3 +249,22 @@ void Ops_Set_Zero(void)
 	HAL_UART_Transmit(&huart6,str,sizeof(str),0xffff);
 }
 
+float Ops_Get_X(void)
+{
+	return ops_data.val[3];
+}
+
+float Ops_Get_Y(void)
+{
+	return ops_data.val[4];
+}
+
+float Ops_Get_Yaw(void)
+{
+	return ops_data.val[0];
+}
+
+float Ops_Get_Yaw_Speed(void)
+{
+	return ops_data.val[5];
+}

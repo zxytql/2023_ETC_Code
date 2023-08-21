@@ -15,6 +15,7 @@
   */
 #include "RC_Task.h"
 #include "cmsis_os.h"
+#include "Task_Flow.h"
 
 /******* Global Variables ********/
 rc_t rc;
@@ -38,7 +39,7 @@ void RC_Task_Entry(void const * argument)
         Rc_Key_Handler(&rc.rc_KeyValue,&rc.rc_key_event);
         Rc_Key_Callback_Handler(&rc.rc_key_event);
 			
-        osDelay(10);
+        osDelay(3);
     }
     /* USER CODE END RC_Task_Entry */
 }
@@ -208,7 +209,7 @@ void Rc_Key_Callback_Handler(rc_key_event_t *event)
  */
 void Rc_Key_a_Callback(void)
 {
-
+	task_flow.chassis_ctrl_mode = REMOTE_CTRL_MODE;
 }
 
 void Rc_Key_b_Callback(void)
@@ -218,7 +219,7 @@ void Rc_Key_b_Callback(void)
 
 void Rc_Key_d_Callback(void)
 {
-
+	task_flow.task_process++;
 }
 
 void Rc_Key_c_middle_Callback(void)

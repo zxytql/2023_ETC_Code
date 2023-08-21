@@ -61,6 +61,7 @@ void MX_FREERTOS_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+
 /* USER CODE END 0 */
 
 /**
@@ -95,10 +96,14 @@ int main(void)
   MX_DMA_Init();
   MX_TIM5_Init();
   MX_USART1_UART_Init();
+  MX_USART6_UART_Init();
+  MX_UART8_Init();
+  MX_TIM12_Init();
   /* USER CODE BEGIN 2 */
 	
 	Usart_IdleIRQ_Init(&huart1);
-	
+	Usart_IdleIRQ_Init(&huart6);
+	Usart_IdleIRQ_Init(&huart8);
 	/* CAN ¹ýÂËÆ÷³õÊ¼»¯ */
 	CAN_Filter_Init();
   /* USER CODE END 2 */

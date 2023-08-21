@@ -8,20 +8,20 @@
 #define USART1_BUFFLEN 25
 #define USART1_MAX_LEN USART1_BUFFLEN * 2
 
-//#define USART2_BUFFLEN 28
+#define USART2_BUFFLEN 28
 //#define USART2_MAX_LEN USART2_BUFFLEN * 2
 
 //#define USART3_BUFFLEN 28
 //#define USART3_MAX_LEN USART3_BUFFLEN * 2
 
-//#define USART6_BUFFLEN 28
-//#define USART6_MAX_LEN USART6_BUFFLEN * 2
+#define USART6_BUFFLEN 28
+#define USART6_MAX_LEN USART6_BUFFLEN * 2
 
 //#define UART7_BUFFLEN 6
 //#define UART7_MAX_LEN UART7_BUFFLEN * 2
 
-//#define UART8_BUFFLEN 28
-//#define UART8_MAX_LEN UART8_BUFFLEN * 2
+#define UART8_BUFFLEN 28
+#define UART8_MAX_LEN UART8_BUFFLEN * 2
 
 /******** Struct ********/
 typedef struct
@@ -35,9 +35,9 @@ typedef struct
 extern uint8_t usart1_buff[USART1_BUFFLEN];
 //extern uint8_t usart2_buff[USART2_BUFFLEN];
 //extern uint8_t usart3_buff[USART3_BUFFLEN];
-//extern uint8_t usart6_buff[USART6_BUFFLEN];
+extern uint8_t usart6_buff[USART6_BUFFLEN];
 //extern uint8_t uart7_buff[UART7_BUFFLEN];
-//extern uint8_t uart8_buff[UART8_BUFFLEN];
+extern uint8_t uart8_buff[UART8_BUFFLEN];
 extern rc_rx_t rc_rx;
 
 /******** Function *********/

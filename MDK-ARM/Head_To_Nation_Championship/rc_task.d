@@ -50,3 +50,9 @@ head_to_nation_championship\rc_task.o: ../Middlewares/Third_Party/FreeRTOS/Sourc
 head_to_nation_championship\rc_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 head_to_nation_championship\rc_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 head_to_nation_championship\rc_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+head_to_nation_championship\rc_task.o: ..\FreeRTOS_Tasks\Task_Flow.h
+head_to_nation_championship\rc_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+head_to_nation_championship\rc_task.o: ..\FreeRTOS_Tasks\Navigation_Task.h
+head_to_nation_championship\rc_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+head_to_nation_championship\rc_task.o: ../Navigation/fuzzy_pid.h
+head_to_nation_championship\rc_task.o: ..\FreeRTOS_Tasks\Chassis_Task.h

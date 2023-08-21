@@ -32,6 +32,7 @@ head_to_nation_championship\bsp_ops.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32
 head_to_nation_championship\bsp_ops.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 head_to_nation_championship\bsp_ops.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 head_to_nation_championship\bsp_ops.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+head_to_nation_championship\bsp_ops.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 head_to_nation_championship\bsp_ops.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 head_to_nation_championship\bsp_ops.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 head_to_nation_championship\bsp_ops.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
@@ -48,3 +49,4 @@ head_to_nation_championship\bsp_ops.o: ../Middlewares/Third_Party/FreeRTOS/Sourc
 head_to_nation_championship\bsp_ops.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 head_to_nation_championship\bsp_ops.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 head_to_nation_championship\bsp_ops.o: ..\BSP\bsp_usart.h
+head_to_nation_championship\bsp_ops.o: ../Core/Inc/usart.h

@@ -52,6 +52,8 @@ osThreadId DJI_Motor_TaskHandle;
 osThreadId Mec_Arm_TaskHandle;
 osThreadId Chassis_TaskHandle;
 osThreadId RC_TaskHandle;
+osThreadId Navigation_TaskHandle;
+osThreadId Task_FlowHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -63,6 +65,8 @@ void DJI_Motor_Ctrl_Task_Entry(void const * argument);
 void Mec_Arm_Ctrl_Task_Entry(void const * argument);
 void Chassis_Task_Entry(void const * argument);
 void RC_Task_Entry(void const * argument);
+void Navigation_Task_Entry(void const * argument);
+void Task_Flow_Entry(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -128,6 +132,14 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of RC_Task */
   osThreadDef(RC_Task, RC_Task_Entry, osPriorityHigh, 0, 128);
   RC_TaskHandle = osThreadCreate(osThread(RC_Task), NULL);
+
+  /* definition and creation of Navigation_Task */
+  osThreadDef(Navigation_Task, Navigation_Task_Entry, osPriorityNormal, 0, 128);
+  Navigation_TaskHandle = osThreadCreate(osThread(Navigation_Task), NULL);
+
+  /* definition and creation of Task_Flow */
+  osThreadDef(Task_Flow, Task_Flow_Entry, osPriorityHigh, 0, 128);
+  Task_FlowHandle = osThreadCreate(osThread(Task_Flow), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -224,6 +236,42 @@ __weak void RC_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END RC_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Navigation_Task_Entry */
+/**
+* @brief Function implementing the Navigation_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Navigation_Task_Entry */
+__weak void Navigation_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Navigation_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Navigation_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Task_Flow_Entry */
+/**
+* @brief Function implementing the Task_Flow thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Task_Flow_Entry */
+__weak void Task_Flow_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Task_Flow_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Task_Flow_Entry */
 }
 
 /* Private application code --------------------------------------------------*/
