@@ -4,13 +4,22 @@
   * @brief      遥控器控制任务
   * @note
   * @history
-  *  Version    Date            Author          Modification
+  *  Version     Date           Author          Modification
   *  V1.0.0     2022-04-05       zxy            First version
-	
+	*  V1.1.0     2023-08-21       zxy            修复开机bug
 	* @note	遥控器偏移量
 				+16 ------------------------- -8
 				
 				-12 ------------------------- -12
+	* @verbatim
+	* [V1.1.0]
+	* 在V1.0.0版本中，函数Rc_Update中的buff[23] == 0x0C 确实可以用来判定遥控器是离线的
+	* 但问题是，如果在机器人启动时，遥控器没有在线，此时buff中所有值均为0
+	* 不满足buff[23] == 0x0C的条件，但仍会让此判定为遥控器在线
+	* 此时进行获取通道值的操作，会得到不正常的数值，超出了限制范围
+	* 因此，左右摇杆值均达到限制最大值，若用摇杆来控制底盘，会出现底盘“跑飞”的现象
+	* 观察发现，在开机后，buff[0]的值一直是定值，且未观察到是A/B/C/D/左右摇杆的通道值
+	* 所以在本版本中，用buff[0] == 0和buff[23] == 0x0C共同判断遥控器是否在线
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   */
 #include "RC_Task.h"
@@ -52,8 +61,17 @@ void RC_Task_Entry(void const * argument)
 */
 void Rc_Update(rc_keyValue_t *value, uint8_t buff[25])
 {
-    rc.online = (buff[23] == 0x0C) ? Offline : Online;
-
+    rc.online = (buff[23] == 0x0C || buff[0] == 0x00) ? Offline : Online;
+	
+	  if (rc.online == Offline)
+    {
+        rc.rc_KeyValue.left_horz_roll   = 0;
+        rc.rc_KeyValue.left_vir_roll    = 0;
+        rc.rc_KeyValue.right_horz_roll  = 0;
+        rc.rc_KeyValue.right_vir_roll   = 0;
+			
+				return;
+    }
     /** 获取通道值 **/
     rc_rx.ch[0] = ((buff[1] | buff[2] << 8) & 0x07FF);
     rc_rx.ch[1] = ((buff[2] >> 3 | buff[3] << 5) & 0x07FF);
@@ -79,13 +97,7 @@ void Rc_Update(rc_keyValue_t *value, uint8_t buff[25])
 
     rc.rc_KeyValue.left_knob        = RC_KNOB_TRANS(rc_rx.ch[6], 306, 1694);
     rc.rc_KeyValue.right_knob       = RC_KNOB_TRANS(rc_rx.ch[7], 306, 1694);
-    if (rc.online == Offline)
-    {
-        rc.rc_KeyValue.left_horz_roll   = 0;
-        rc.rc_KeyValue.left_vir_roll    = 0;
-        rc.rc_KeyValue.right_horz_roll  = 0;
-        rc.rc_KeyValue.right_vir_roll   = 0;
-    }
+		
 }
 
 /**
@@ -214,7 +226,7 @@ void Rc_Key_a_Callback(void)
 
 void Rc_Key_b_Callback(void)
 {
-
+	
 }
 
 void Rc_Key_d_Callback(void)

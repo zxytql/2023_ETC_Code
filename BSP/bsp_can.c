@@ -9,7 +9,7 @@
   *  Version    Date            Author          Modification
   *  V1.0.0     Dec-26-2018     RM              1. done
   *  V1.1.0     Nov-11-2019     RM              1. support hal lib
-  *  V1.2.0		2020.2.4        YLT             支持hdc驱动
+  *  V1.2.0		  2020.2.4        YLT             支持hdc驱动
   *  V1.2.1     2022-01-09      ZXY             Add note
   @verbatim
   ==============================================================================

@@ -44,6 +44,7 @@
 "head_to_nation_championship\bsp_buzzer.o"
 "head_to_nation_championship\bsp_led.o"
 "head_to_nation_championship\bsp_power_ctrl.o"
+"head_to_nation_championship\bsp_gm65.o"
 "head_to_nation_championship\dji_motor_ctrl.o"
 "head_to_nation_championship\od_can_com.o"
 "head_to_nation_championship\dji_motor_ctrl_task.o"
@@ -59,7 +60,6 @@
 "head_to_nation_championship\mcknum_wheel.o"
 "head_to_nation_championship\fuzzy_pid.o"
 "head_to_nation_championship\bsp_hmi.o"
-"head_to_nation_championship\tjc_usart_hmi.o"
 --library_type=microlib --strict --scatter "Head_To_Nation_Championship\Head_To_Nation_Championship.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

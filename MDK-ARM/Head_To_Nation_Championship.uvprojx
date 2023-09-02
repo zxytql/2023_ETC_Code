@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx,__TARGET_FPU_VFP,ARM_MATH_CM4,__CC_ARM,__FPU_PRESENT=1U,__FPU_USED=1U</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BSP;../Motor;../FreeRTOS_Tasks;../Servo;../Chassis;../Navigation;..\HMI</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BSP;../Motor;../FreeRTOS_Tasks;../Servo;../Chassis;../Navigation;../HMI</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -837,6 +837,11 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\bsp_power_ctrl.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_GM65.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\bsp_GM65.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -941,11 +946,6 @@
               <FileName>bsp_hmi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HMI\bsp_hmi.c</FilePath>
-            </File>
-            <File>
-              <FileName>tjc_usart_hmi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HMI\tjc_usart_hmi.c</FilePath>
             </File>
           </Files>
         </Group>

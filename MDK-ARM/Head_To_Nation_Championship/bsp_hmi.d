@@ -36,4 +36,3 @@ head_to_nation_championship\bsp_hmi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32
 head_to_nation_championship\bsp_hmi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 head_to_nation_championship\bsp_hmi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 head_to_nation_championship\bsp_hmi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-head_to_nation_championship\bsp_hmi.o: ..\HMI\tjc_usart_hmi.h

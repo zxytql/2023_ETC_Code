@@ -68,8 +68,8 @@ typedef struct
 
 typedef struct
 {
-    rc_state_e rc_state;
-    rc_ctrl_state_e rc_ctrl_state;
+//    rc_state_e rc_state;
+//    rc_ctrl_state_e rc_ctrl_state;
     rc_keyValue_t rc_KeyValue;
     rc_key_event_t rc_key_event;
 

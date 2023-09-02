@@ -27,12 +27,15 @@ int zxy2 = 60;
 void Mec_Arm_Ctrl_Task_Entry(void const * argument)
 {
   /* USER CODE BEGIN Mec_Arm_Ctrl_Task_Entry */
-	Servo_Init();
+	
+	vTaskDelete(NULL); //…æ≥˝◊‘…Ì£¨∑¿÷πŒÛ∆Ù∂Ø
+	
+	//Servo_Init();
 	//Servo_Ctrl(SERVO_LEFT_NUM,0);
 //	Servo_Ctrl(SERVO_RIGHT_NUM,0);
 	//Mec arm init position
-	Set_Current_XYZ(0,40,60);
-	osDelay(1000);
+	//Set_Current_XYZ(0,40,60);
+	//osDelay(1000);
 
 	//--------------------
 	

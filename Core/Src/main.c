@@ -99,6 +99,7 @@ int main(void)
   MX_USART6_UART_Init();
   MX_UART8_Init();
   MX_TIM12_Init();
+  MX_UART7_Init();
   /* USER CODE BEGIN 2 */
 	
 	Usart_IdleIRQ_Init(&huart1);

@@ -15,7 +15,6 @@
 #include "usart.h"
 #include "stdio.h"
 #include "string.h"
-#include "tjc_usart_hmi.h"
 
 int fputc(int ch, FILE *f)
 {
@@ -36,7 +35,7 @@ void HMI_Write_txt(uint8_t n, float val)
 	switch(n)
 	{
 		case HMI_TASK_CODE: //任务码
-			printf("t0.txt=\"%d\"",(int)val);
+			printf("t0.txt=\"%d+%d\"",(int)val/1000,(int)val%1000); //拆分前三位和后三位
 			printf("\xff\xff\xff");
 			break;
 		
@@ -60,7 +59,8 @@ void HMI_Write_txt(uint8_t n, float val)
 			break;
 		
 		case HMI_TASK_PCS:	//task_flow 流程码
-
+			printf("t13.txt=\"%d\"",(int)val);
+			printf("\xff\xff\xff");
 			break;
 		
 		case HMI_START_CODE:

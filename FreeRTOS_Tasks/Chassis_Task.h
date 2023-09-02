@@ -46,7 +46,7 @@ typedef struct
 extern chassis_t chassis;
 
 /**** Function ****/
-void OD_Axis_Init(void);
+//void OD_Axis_Init(void);
 void Global_Cor_Trans(chassis_t *ptr);
 
 #endif

@@ -85,7 +85,7 @@ void DriverInit(int i, int motor_type, int unit_mode)
         Driver[i].velCtrl.dec = 1000.0f;
         Driver[i].velCtrl.desiredVel[CMD] = 0.0f;
         Driver[i].posCtrl.acc = Driver[i].velCtrl.dec;
-        Driver[i].posCtrl.posVel = 50.0f;
+        Driver[i].posCtrl.posVel = 250.0f;
         Driver[i].homingMode.vel = -160.0f;
     }
     else if (Motor[i].type == M_2006) {

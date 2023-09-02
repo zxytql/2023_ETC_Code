@@ -21,6 +21,8 @@
 * @retval None
 */
 /* USER CODE END Header_DJI_Motor_Ctrl_Task_Entry */
+
+int zxy98 = 0;
 void DJI_Motor_Ctrl_Task_Entry(void const * argument)
 {
   /* USER CODE BEGIN DJI_Motor_Ctrl_Task_Entry */
@@ -29,10 +31,12 @@ void DJI_Motor_Ctrl_Task_Entry(void const * argument)
 	DriverInit(1,M_2006,SPEED_CONTROL_MODE);
 	DriverInit(2,M_2006,SPEED_CONTROL_MODE);
 	DriverInit(3,M_2006,SPEED_CONTROL_MODE);
+	DriverInit(4,RM_3508,POSITION_CONTROL_MODE);
 	
   /* Infinite loop */
   for(;;)
   {
+		SetPos(4,zxy98);
 		MotorCtrl();
     osDelay(1);
   }

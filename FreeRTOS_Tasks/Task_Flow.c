@@ -15,9 +15,15 @@
 #include "bsp_hmi.h"
 #include "tjc_usart_hmi.h"
 #include "usart.h"
+#include "bsp_GM65.h"
+#include "bsp_servo.h"
+#include "OD_CAN_Com.h"
 
 /**** Global ****/
 task_flow_t task_flow;
+uint8_t temp_buff_start;
+int g_zxy_servo_test1 = 0;
+int g_zxy_servo_test2 = 0;
 
 /* USER CODE BEGIN Header_Task_Flow_Entry */
 /**
@@ -28,27 +34,47 @@ task_flow_t task_flow;
 /* USER CODE END Header_Task_Flow_Entry */
 void Task_Flow_Entry(void const * argument)
 {
-	//HMI_Write_txt(HMI_START_CODE,0);
-	task_flow.task_process = 0;
-	task_flow.chassis_ctrl_mode = START_UP_MODE;
-	BeginWarnBuzzer();
-	task_flow.chassis_ctrl_mode = REMOTE_CTRL_MODE;
+	Servo_Init();
+	HAL_UART_Receive_IT(&huart7,(uint8_t *)&temp_buff_start,1);
 	
-	HMI_Write_txt(HMI_TASK_CODE,123123);
+	/** Ê¹ÄÜ MINI ODRIVE **/
+	osDelay(3000);
+	OD_Clear_Errors(OD_AXIS1);
+	OD_Set_Ctrl_Mode(OD_AXIS1,CONTROL_MODE_POSITION_CONTROL,INPUT_MODE_TRAP_TRAJ);
+	OD_Axis_Set_CloseLoop(OD_AXIS1);
+	/** ------------------- **/
+	
+	task_flow.task_process = 0;
+	BeginWarnBuzzer();
+	
+	task_flow.chassis_ctrl_mode = REMOTE_CTRL_MODE;
+	HMI_Write_txt(HMI_TASK_CODE,666666);
   /* USER CODE BEGIN Task_Flow_Entry */
   /* Infinite loop */
   for(;;)
   {
+		Servo_Ctrl('B',g_zxy_servo_test1);
+		Servo_Ctrl('C',g_zxy_servo_test2);
 		switch(task_flow.task_process)
 		{
 			case 0:
 				break;
 			
 			case 1:
-				task_flow.chassis_ctrl_mode = NAVIGATION_MODE;
+				GM65_Scan();
 				break;
 			
 			case 2:
+				HMI_Write_txt(HMI_TASK_CODE,GM_65_num_1*1000+GM_65_num_2);
+				task_flow.task_process++;
+				break;
+			
+			case 3:
+				
+				break;
+			
+			case 4:
+				task_flow.chassis_ctrl_mode = NAVIGATION_MODE;
 				break;
 			
 			default:
@@ -72,5 +98,6 @@ void HMI_Update(void)
 		HMI_Write_txt(HMI_POS_X,PID_nav.x_now);
 		HMI_Write_txt(HMI_POS_Y,PID_nav.y_now);
 		HMI_Write_txt(HMI_POS_YAW,PID_nav.yaw_now);
+		HMI_Write_txt(HMI_TASK_PCS,task_flow.task_process);
 	}
 }

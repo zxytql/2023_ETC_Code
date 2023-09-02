@@ -53,6 +53,13 @@ head_to_nation_championship\task_flow.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm
 head_to_nation_championship\task_flow.o: ../Navigation/fuzzy_pid.h
 head_to_nation_championship\task_flow.o: ..\FreeRTOS_Tasks\Chassis_Task.h
 head_to_nation_championship\task_flow.o: ../BSP/bsp_buzzer.h
-head_to_nation_championship\task_flow.o: ..\HMI\bsp_hmi.h
-head_to_nation_championship\task_flow.o: ..\HMI\tjc_usart_hmi.h
+head_to_nation_championship\task_flow.o: ../HMI/bsp_hmi.h
+head_to_nation_championship\task_flow.o: ../HMI/tjc_usart_hmi.h
 head_to_nation_championship\task_flow.o: ../Core/Inc/usart.h
+head_to_nation_championship\task_flow.o: ../BSP/bsp_GM65.h
+head_to_nation_championship\task_flow.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+head_to_nation_championship\task_flow.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+head_to_nation_championship\task_flow.o: ../BSP/bsp_servo.h
+head_to_nation_championship\task_flow.o: ../Core/Inc/tim.h
+head_to_nation_championship\task_flow.o: ../Motor/OD_CAN_Com.h
+head_to_nation_championship\task_flow.o: ../Core/Inc/can.h
