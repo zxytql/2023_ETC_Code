@@ -26,7 +26,13 @@ enum InputMode {
 		INPUT_MODE_MIRROR                = 7,
 		INPUT_MODE_TUNING                = 8,
 };
-				
+
+typedef union
+{
+	float val;
+	char byte[4];
+}OD_union_t;
+
 uint8_t* Float_to_Byte(float f);
 void OD_Send_CAN(CAN_HandleTypeDef *hcan, uint16_t address, uint8_t data[8]);
 void OD_Axis_Set_CloseLoop(uint16_t od_axis);

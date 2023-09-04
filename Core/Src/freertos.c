@@ -122,8 +122,8 @@ void MX_FREERTOS_Init(void) {
   DJI_Motor_TaskHandle = osThreadCreate(osThread(DJI_Motor_Task), NULL);
 
   /* definition and creation of Mec_Arm_Task */
-//  osThreadDef(Mec_Arm_Task, Mec_Arm_Ctrl_Task_Entry, osPriorityNormal, 0, 128);
-//  Mec_Arm_TaskHandle = osThreadCreate(osThread(Mec_Arm_Task), NULL);
+  osThreadDef(Mec_Arm_Task, Mec_Arm_Ctrl_Task_Entry, osPriorityNormal, 0, 128);
+  Mec_Arm_TaskHandle = osThreadCreate(osThread(Mec_Arm_Task), NULL);
 
   /* definition and creation of Chassis_Task */
   osThreadDef(Chassis_Task, Chassis_Task_Entry, osPriorityNormal, 0, 128);

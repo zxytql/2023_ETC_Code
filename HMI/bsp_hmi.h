@@ -10,7 +10,7 @@
 #define HMI_POS_YAW		(9)
 #define HMI_IDT_CODE	(11)
 #define HMI_TASK_PCS	(13)
-
+#define HMI_VISION_STA (14)
 /**** Function ****/
 void HMI_Write_txt(uint8_t n, float val);
 

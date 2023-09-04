@@ -18,6 +18,9 @@
 
 /**** Global Variables ****/
 uint8_t od_trans_byte[4] = {0};
+OD_union_t OD_union;
+
+
 
 /**************************/
 
@@ -44,6 +47,8 @@ uint8_t* Float_to_Byte(float f)
 	temp = od_trans_byte[1];
 	od_trans_byte[1] = od_trans_byte[2];
 	od_trans_byte[2] = temp;
+//	OD_union.val = f;
+//	memcpy(od_trans_byte,OD_union.byte,4);
 	return od_trans_byte;	
 }
 

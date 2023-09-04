@@ -66,11 +66,10 @@
   */
 #include "bsp_usart.h"
 #include "string.h"
-#include "bsp_hmi.h"
 
 /****** 串口数据储存数组定义 ******/
 uint8_t usart1_buff[USART1_BUFFLEN];
-//uint8_t usart2_buff[USART2_BUFFLEN];
+uint8_t usart2_buff[USART2_BUFFLEN];
 //uint8_t usart3_buff[USART3_BUFFLEN];
 uint8_t usart6_buff[USART6_BUFFLEN];
 //uint8_t uart7_buff[UART7_BUFFLEN];
@@ -78,7 +77,8 @@ uint8_t uart8_buff[UART8_BUFFLEN];
 
 /******** 数据结构体 ********/
 rc_rx_t rc_rx;
-
+ras_rx_t ras_rx;
+ras_pos_t ras_pos;
 
 /**
   * @brief      配置使能DMA接收(而不是中断接收)
@@ -149,6 +149,15 @@ void Usart_IdleIRQ_Init(UART_HandleTypeDef *huart)
         /** 开启DMA接收 **/
 				uart_receive_dma_no_it(&huart8,uart8_buff,UART8_MAX_LEN);
     }
+    else if (USART2 == huart->Instance)
+    {
+			  /* 清除空闲中断标志位 */
+				__HAL_UART_CLEAR_IDLEFLAG(&huart2);
+        /** 使能串口中断 **/
+        __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
+        /** 开启DMA接收 **/
+				uart_receive_dma_no_it(&huart2,usart2_buff,USART2_MAX_LEN);
+    }
 }
 
 /**
@@ -201,6 +210,21 @@ void Usart1_Idle_Callback(uint8_t *buff)
 //		
 //}
 
+void Usart2_Idle_Callback(uint8_t *buff)
+{
+	if (buff[0] == 0xAA && buff[15] == 0xAE)
+	{
+		memcpy(&ras_rx,buff,16);
+		memcpy(&ras_pos.data,buff+5,8);
+	}
+	//Ras_Pos_Phase(&ras_pos, buff);
+}
+
+void Ras_Pos_Phase(ras_pos_t *ras_pos, uint8_t *buff)
+{
+	memcpy(&(ras_pos->data[0]), &(buff[5]), 8);
+}
+
 void Uart6_Idle_Callback(uint8_t *buff)
 {
 	//Ops_Frame_Parse(&ops_data,buff);
@@ -241,43 +265,20 @@ void Usart_IdleIRQ_Callback(UART_HandleTypeDef *huart)
     }
     else if (UART8 == huart->Instance)
     {
-				zxy111 = __HAL_DMA_GET_COUNTER(huart->hdmarx);
         if (UART8_BUFFLEN == UART8_MAX_LEN - __HAL_DMA_GET_COUNTER(huart->hdmarx))
         {
             Uart8_Idle_Callback(uart8_buff);
         }
         __HAL_DMA_SET_COUNTER(huart->hdmarx,UART8_MAX_LEN);
     }
+    else if (USART2 == huart->Instance)
+    {
+				zxy111 = __HAL_DMA_GET_COUNTER(huart->hdmarx);
+        if (USART2_BUFFLEN == USART2_MAX_LEN - __HAL_DMA_GET_COUNTER(huart->hdmarx))
+        {
+            Usart2_Idle_Callback(usart2_buff);
+        }
+        __HAL_DMA_SET_COUNTER(huart->hdmarx,USART2_MAX_LEN);
+    }
 }
 
-void Pc_Send_Data(ops_data_t *ops, uint8_t *buff)
-{
-	//(buf[0] == OPS_HEAD_H && buf[1] == OPS_HEAD_L && buf[26] == OPS_END_H && buf[27] == OPS_END_L)
-//	uint8_t buff_send_pc[28];
-//	//uint8_t buff_ops_copy[24];
-//	static union
-//	{
-//    char data[24];
-//    float val[6];
-//	}buff_ops_copy;
-//	
-//	if (buff[0] == OPS_HEAD_H && buff[1] == OPS_HEAD_L && buff[26] == OPS_END_H && buff[27] == OPS_END_L)
-//	{
-//			memcpy(&(buff_ops_copy.data[0]), &(buff[2]), 24);
-//	}	
-
-//	
-//	/** 翻转XY坐标 **/
-//	buff_ops_copy.val[3] = -buff_ops_copy.val[3];
-//	buff_ops_copy.val[4] = -buff_ops_copy.val[4];
-//	
-//	buff_send_pc[0] = OPS_HEAD_H;
-//	buff_send_pc[1] = OPS_HEAD_L;
-//	
-//	buff_send_pc[26] = OPS_END_H;
-//	buff_send_pc[27] = OPS_END_L;
-//	/** 复制 buff_ops_copy 中的数据 **/
-//	memcpy(&(buff_send_pc[2]), &(buff_ops_copy.data[0]), 24);
-//	HAL_UART_Transmit_IT(&huart7,buff_send_pc,28);	
-	
-}

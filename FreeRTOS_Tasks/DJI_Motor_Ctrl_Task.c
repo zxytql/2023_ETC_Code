@@ -36,7 +36,6 @@ void DJI_Motor_Ctrl_Task_Entry(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		SetPos(4,zxy98);
 		MotorCtrl();
     osDelay(1);
   }

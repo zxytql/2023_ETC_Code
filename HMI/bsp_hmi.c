@@ -66,5 +66,23 @@ void HMI_Write_txt(uint8_t n, float val)
 		case HMI_START_CODE:
 			//HAL_UART_Transmit(&huart6,ucHMIEnd,(uint8_t)3,200);
 			break;
+		
+		case HMI_VISION_STA:
+			if(val == 1)
+			{
+				printf("t14.txt=\"VISION LUMP!\""); //识别色块
+				printf("\xff\xff\xff");				
+			}
+			else if(val == 2)
+			{
+				printf("t14.txt=\"VISION RING!\""); //识别色环
+				printf("\xff\xff\xff");						
+			}
+			else
+			{
+				printf("t14.txt=\"WAIT VISION\""); //未开机或数据错误
+				printf("\xff\xff\xff");					
+			}
+			break;
 	}
 }

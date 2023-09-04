@@ -34,13 +34,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	{
 		if(temp_buff != 0x0D) 
 		{
-			GM65_UART_rx_buff[GM65_UART_rx_cnt++] = temp_buff;  //Fix me 没扫到怎么办？
-//			
-//			if(temp_buff == 0x7E && UART1_rx_buff[8] == 0xCD) //说明第一次没扫到
-//			{
-//				memset(UART1_rx_buff,0x00,sizeof(UART1_rx_buff)); //清空缓存区
-//				UART1_rx_cnt = 0;
-//			}
+			GM65_UART_rx_buff[GM65_UART_rx_cnt++] = temp_buff; 
 		}
 		else //接收到回车 说明扫到了数据
 		{
@@ -58,7 +52,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 void GM65_Scan(void)
 {
 	static int i = 0; //记录发送成功次数
-	static int send_flag = 1; //发送标志
+	static int send_flag = 1; //准备发送标志
 	static int tick_start = 0, tick_now = 0;
 	
 	tick_now = HAL_GetTick(); //获取当前tick
@@ -71,6 +65,7 @@ void GM65_Scan(void)
 	
 	if(send_flag == 1)
 	{
+		
 		if(HAL_UART_Transmit(&huart7,GM_65_On_Cmd,sizeof(GM_65_On_Cmd),0xff) == HAL_OK)
 		{
 			i++;
@@ -81,6 +76,8 @@ void GM65_Scan(void)
 
 	if(tick_now - tick_start >= 5000) //超过5秒 还是没有读到二维码数据 重新发送
 	{
+		memset(GM65_UART_rx_buff,0x00,sizeof(GM65_UART_rx_buff)); //清空缓存区
+		GM65_UART_rx_cnt = 0; //从头开始存储数据
 		send_flag = 1;
 	}
 }

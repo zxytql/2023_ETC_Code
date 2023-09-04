@@ -85,7 +85,7 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
-
+ 
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -100,9 +100,11 @@ int main(void)
   MX_UART8_Init();
   MX_TIM12_Init();
   MX_UART7_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	
 	Usart_IdleIRQ_Init(&huart1);
+	Usart_IdleIRQ_Init(&huart2);
 	Usart_IdleIRQ_Init(&huart6);
 	Usart_IdleIRQ_Init(&huart8);
 	/* CAN ¹ýÂËÆ÷³õÊ¼»¯ */

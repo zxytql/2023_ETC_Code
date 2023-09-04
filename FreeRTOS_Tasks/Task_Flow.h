@@ -22,4 +22,8 @@ extern task_flow_t task_flow;
 
 /**** Function ****/
 void HMI_Update(void);
+void Pick_Ground_1(void);
+void Pick_Ground_2(void);
+void Pick_Ground_3(void);
+
 #endif
