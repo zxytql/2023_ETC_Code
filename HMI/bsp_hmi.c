@@ -84,5 +84,18 @@ void HMI_Write_txt(uint8_t n, float val)
 				printf("\xff\xff\xff");					
 			}
 			break;
+			
+		case HMI_RAS_POS_ERR_X:
+			printf("t15.txt=\"%d\"",(int)val); //X_ERR
+			printf("\xff\xff\xff");				
+			break;
+
+		case HMI_RAS_POS_ERR_Y:
+			printf("t16.txt=\"%d\"",(int)val); //Y_ERR
+			printf("\xff\xff\xff");				
+			break;
+		
+		default:
+			break;
 	}
 }

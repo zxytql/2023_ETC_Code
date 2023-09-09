@@ -26,8 +26,6 @@ typedef struct
     float v_set;
     float v_plan;
 
-    float yaw_tgt;
-
     uint8_t path_index;
     uint8_t point_index;
     uint8_t track_state; //µã¸ú×Ù×´Ì¬ DONE/NOT DONE

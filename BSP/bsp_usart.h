@@ -40,8 +40,8 @@ typedef struct
 
 typedef union
 {
-	int8_t data[8];
-	float val[2];
+	int8_t data[12];
+	float val[3];
 } ras_pos_t;
 
 /** -------------------------**/

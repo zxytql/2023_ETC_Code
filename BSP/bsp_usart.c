@@ -215,7 +215,7 @@ void Usart2_Idle_Callback(uint8_t *buff)
 	if (buff[0] == 0xAA && buff[15] == 0xAE)
 	{
 		memcpy(&ras_rx,buff,16);
-		memcpy(&ras_pos.data,buff+5,8);
+		memcpy(&ras_pos.data,buff+1,12);
 	}
 	//Ras_Pos_Phase(&ras_pos, buff);
 }
