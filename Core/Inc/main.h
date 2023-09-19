@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ROCKER_KEY_Pin GPIO_PIN_10
+#define ROCKER_KEY_GPIO_Port GPIOH
 #define LED2_Pin GPIO_PIN_2
 #define LED2_GPIO_Port GPIOG
 #define LED1_Pin GPIO_PIN_1

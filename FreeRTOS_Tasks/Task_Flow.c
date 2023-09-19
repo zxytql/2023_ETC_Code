@@ -27,34 +27,34 @@
 #include "Navigation_Task.h"
 
 
-#define OD_START_POS 		(0.4406) //0.4369
-#define OD_READY_POS		(0.187) //准备区的位置，防止超出边界
+#define OD_START_POS 		(0.4451) 
+#define OD_READY_POS		(0.1951) //准备区的位置，防止超出边界
 #define BELT_MOTOR_ID   (4)
 
-#define PICK_GROUND_HEIGHT 			(-8192*46)
-#define PLACE_GROUND_HEIGHT 		(-8192*44.5)
-#define PLACE_CARRIER_HEIGHT 		(-8192*3)
-#define PICK_CARRIER_HEIGHT			(-8192*6.5)
+#define PICK_GROUND_HEIGHT 			(-8192*53) 
+#define PLACE_GROUND_HEIGHT 		(-8192*51.5)
+#define PLACE_CARRIER_HEIGHT 		(-8192*11)  
+#define PICK_CARRIER_HEIGHT			(-8192*13.5)
 #define TURNTABLE_HEIGHT 				(-8192*12)
-#define VERTEX_HEIGHT 					(0)
+#define VERTEX_HEIGHT 					(-8192)
 
-#define CARRIER_1_ANGLE (-95)  //-95
-#define CARRIER_2_ANGLE (-17)   //-17
+#define CARRIER_1_ANGLE (-92)  //-92
+#define CARRIER_2_ANGLE (-15)   //-15
 #define CARRIER_3_ANGLE (65)   //65
 
 #define PM_ANGLE_0			(OD_START_POS)
-#define PM_ANGLE_1			(OD_START_POS - 0.4737)
-#define PM_ANGLE_2			(OD_START_POS - 0.4737)
-#define PM_ANGLE_3			(OD_START_POS - 0.4737)
+#define PM_ANGLE_1			(OD_START_POS - 0.4651) //SUM = -0.020
+#define PM_ANGLE_2			(OD_START_POS - 0.4651)
+#define PM_ANGLE_3			(OD_START_POS - 0.4651)
 
-#define PICK_PM_ANGLE_1			(OD_START_POS - 0.4676)
-#define PICK_PM_ANGLE_2			(OD_START_POS - 0.4676)
-#define PICK_PM_ANGLE_3			(OD_START_POS - 0.4676)
+#define PICK_PM_ANGLE_1			(OD_START_POS - 0.4651)
+#define PICK_PM_ANGLE_2			(OD_START_POS - 0.4651)
+#define PICK_PM_ANGLE_3			(OD_START_POS - 0.4651)
 
-#define CLAW_ANGLE_OPEN 	(-15)
-#define CLAW_ANGLE_CATCH 	(35) 
-#define CLAW_ANGLE_SOPEN	(-5) 
-#define CLAW_ANGLE_MOPEN	(-10) 
+#define CLAW_ANGLE_OPEN 	(0) //0
+#define CLAW_ANGLE_CATCH 	(55) //
+#define CLAW_ANGLE_SOPEN	(40) //
+#define CLAW_ANGLE_MOPEN	(40) //
 
 /**** Global ****/
 task_flow_t task_flow;
@@ -64,10 +64,12 @@ const uint8_t g_vision_change01_cmd[3] = {0xAA, 0x01, 0xAE};
 
 int place_order[6] = {0}; //物料放置顺序 在扫码完成后赋值
 
+extern uint16_t START_FLAG; //按钮开始标志位 由动态任务Start_RockerKey_Task发送
+
 int g_zxy_servo_test1 = 0;
 int g_zxy_servo_test2 = 0;
 int g_zxy_3508_height = 0;
-float g_OD_zxy99 = 0;
+float g_OD_zxy99 = OD_START_POS;
 float g_ring_err_x = 0;
 float g_ring_err_y = 0;
 float g_ring_err_yaw = 0;
@@ -82,6 +84,44 @@ float g_pd_base_x = 0;
 float g_pd_base_y = 0;
 float g_pd_base_yaw = 0;
 
+/**
+ * @brief 粗加工区位置初始化
+ * @param NULL
+ */
+void Roughing_Area_Point_Init(void)
+{
+	task_flow.roughing_area_pos.red_x = 1940.0f;
+	task_flow.roughing_area_pos.red_y = 889.6f;
+	task_flow.roughing_area_pos.red_yaw = 0.0f;
+	
+	task_flow.roughing_area_pos.green_x = 1940.0f;
+	task_flow.roughing_area_pos.green_y = task_flow.roughing_area_pos.red_y + 150.0f;
+	task_flow.roughing_area_pos.green_yaw = 0.0f;
+
+	task_flow.roughing_area_pos.blue_x = 1940.0f;
+	task_flow.roughing_area_pos.blue_y = task_flow.roughing_area_pos.red_y + 300.0f;
+	task_flow.roughing_area_pos.blue_yaw = 0.0f;	
+}
+
+/**
+ * @brief 精加工区位置初始化
+ * @param NULL
+ */
+void Finishing_Area_Point_Init(void)
+{
+	task_flow.roughing_area_pos.red_x = 1940.0f;
+	task_flow.roughing_area_pos.red_y = 889.6f;
+	task_flow.roughing_area_pos.red_yaw = 0.0f;
+	
+	task_flow.roughing_area_pos.green_x = 1940.0f;
+	task_flow.roughing_area_pos.green_y = task_flow.roughing_area_pos.red_y + 150.0f;
+	task_flow.roughing_area_pos.green_yaw = 0.0f;
+
+	task_flow.roughing_area_pos.blue_x = 1940.0f;
+	task_flow.roughing_area_pos.blue_y = task_flow.roughing_area_pos.red_y + 300.0f;
+	task_flow.roughing_area_pos.blue_yaw = 0.0f;	
+}
+
 /* USER CODE BEGIN Header_Task_Flow_Entry */
 /**
 * @brief Function implementing the Task_Flow thread.
@@ -93,14 +133,15 @@ void Task_Flow_Entry(void const * argument)
 {
 	HAL_UART_Receive_IT(&huart7,(uint8_t *)&temp_buff_start,1);
 	Servo_Init();
-
+	Roughing_Area_Point_Init();
+	
 	/** 使能 MINI ODRIVE 回到相对零位 **/
 	osDelay(3000);
 	OD_Clear_Errors(OD_AXIS1);
 	OD_Set_Ctrl_Mode(OD_AXIS1,CONTROL_MODE_POSITION_CONTROL,INPUT_MODE_TRAP_TRAJ);
 	OD_Axis_Set_CloseLoop(OD_AXIS1);
 	
-	OD_Set_Input_Pos(OD_AXIS1,OD_READY_POS);
+	OD_Set_Input_Pos(OD_AXIS1,OD_READY_POS); 
 	/** ------------------- **/
 	Servo_Ctrl('C',0);
 	Servo_Ctrl('B',0);
@@ -111,8 +152,9 @@ void Task_Flow_Entry(void const * argument)
 	task_flow.chassis_ctrl_mode = REMOTE_CTRL_MODE; //开机默认为遥控器模式
 	HMI_Write_txt(HMI_TASK_CODE,666666);
 	
-	PID_nav.err_cir_x = 1.0f; //给定导航误差圆精度为1mm
-	PID_nav.err_cir_y = 1.0f;
+	PID_nav.err_cir_x = 2.0f; //给定导航误差圆精度为2mm
+	PID_nav.err_cir_y = 2.0f;
+	
 	
   /* USER CODE BEGIN Task_Flow_Entry */
   /* Infinite loop */
@@ -125,12 +167,18 @@ void Task_Flow_Entry(void const * argument)
 //		OD_Set_Input_Pos(OD_AXIS1,g_OD_zxy99);
 		/*------------------------------------*/
 		
+		if(START_FLAG == 1 && task_flow.task_process == 0)
+		{
+			START_FLAG = 99;
+			task_flow.task_process = 1;
+		}
+		
 		switch(task_flow.task_process)
 		{
 			case 1: //开机 去扫码
 				task_flow.chassis_ctrl_mode = NAVIGATION_MODE;
-				PID_nav.x_set = 550;
-				PID_nav.y_set = 220;
+				PID_nav.x_set = 570;
+				PID_nav.y_set = 150;
 				GM65_Scan();
 				break;
 			
@@ -148,22 +196,20 @@ void Task_Flow_Entry(void const * argument)
 				task_flow.task_process++;
 				break;
 			
-			case 3: //扫描到后 往内侧走 防止旋转时进入禁区
-				PID_nav.y_set = 120;
-				if(PID_nav.y_now <= 125)
-				{
-					task_flow.task_process++;
-				}
+			case 3: //现在空，原本是扫描到后 往内侧走 防止旋转时进入禁区
+				
+				task_flow.task_process++;
+			
 				break;
 			
 			case 4: //前往转盘
 				PID_nav.x_set = 1440;
-				PID_nav.y_set = 200;
+				PID_nav.y_set = 150;
 				PID_nav.yaw_set = -90.0f;
 				OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
 			
-				if(fabs(PID_nav.x_now - PID_nav.x_set) < PID_nav.err_cir_x 
-					&& fabs(PID_nav.y_now - PID_nav.y_set) < PID_nav.err_cir_y)
+				if(fabs(PID_nav.x_now - PID_nav.x_set) < 10.0f 
+					&& fabs(PID_nav.y_now - PID_nav.y_set) < 10.0f)
 				{
 					task_flow.task_process = 10;
 				}
@@ -183,8 +229,8 @@ void Task_Flow_Entry(void const * argument)
 				PID_nav.y_set = 130;
 				PID_nav.yaw_set = 0.0f;
 				OD_Set_Input_Pos(OD_AXIS1,OD_READY_POS); //收回爪子 减小转动惯量
-				if(fabs(PID_nav.x_now - PID_nav.x_set) < PID_nav.err_cir_x 
-					&& fabs(PID_nav.y_now - PID_nav.y_set) < PID_nav.err_cir_y)
+				if(fabs(PID_nav.x_now - PID_nav.x_set) < 20.0f 
+					&& fabs(PID_nav.y_now - PID_nav.y_set) < 20.0f)
 				{
 					task_flow.task_process++;
 				}
@@ -192,15 +238,13 @@ void Task_Flow_Entry(void const * argument)
 				break;
 			
 			case 11:  //向树莓派发送**色环识别**命令
-				HAL_UART_Transmit_IT(&huart2,g_vision_change02_cmd,sizeof(g_vision_change02_cmd));
 				OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
+				HAL_UART_Transmit_IT(&huart2,g_vision_change02_cmd,sizeof(g_vision_change02_cmd));
+				Place_Roughing_Area_Point_Handler(); //前往粗加工区 粗定位
 				task_flow.task_process++;
 				break;
 			
-			case 12: //前往粗加工区 粗定位
-				PID_nav.x_set = 1940.0f;
-				PID_nav.y_set = 889.6f;
-				PID_nav.yaw_set = 0.0f;
+			case 12: 
 				if(fabs(PID_nav.x_now - PID_nav.x_set) < PID_nav.err_cir_x 
 					&& fabs(PID_nav.y_now - PID_nav.y_set) < PID_nav.err_cir_y)
 				{
@@ -217,17 +261,12 @@ void Task_Flow_Entry(void const * argument)
 			
 			case 14: //放第一个物料
 				Place_Ground_Handler();
-//				//标定绿色色环X Y 
-//				task_flow.roughing_area_pos.roughing_area_green_x = PID_nav.x_now;
-//				task_flow.roughing_area_pos.roughing_area_green_y = PID_nav.y_now;
-//				task_flow.roughing_area_pos.roughing_area_green_yaw = PID_nav.yaw_now;
-//				task_flow.task_process++;
 			
-				PID_nav.y_set = PID_nav.y_now + 150.0f; //设定下一个物料坐标
+				Place_Roughing_Area_Point_Handler(); //设定下一个物料坐标
 				task_flow.task_process++;
 				break;
 			
-			case 15: 
+			case 15: //到达第二个物料坐标
 				if(fabs(PID_nav.x_now - PID_nav.x_set) < PID_nav.err_cir_x 
 					&& fabs(PID_nav.y_now - PID_nav.y_set) < PID_nav.err_cir_y)
 				{
@@ -242,14 +281,14 @@ void Task_Flow_Entry(void const * argument)
 				Vision_Ring_Correction(g_ring_err_x,g_ring_err_y,g_ring_err_yaw);
 				break;
 			
-			case 17:
+			case 17: //放第二个物料
 				Place_Ground_Handler();
 			
-				PID_nav.y_set = PID_nav.y_now + 150.0f; //设定下一个物料坐标
+				Place_Roughing_Area_Point_Handler(); //设定下一个物料坐标
 				task_flow.task_process++;		
 				break;
 			
-			case 18:
+			case 18: //到达第三个物料坐标
 				if(fabs(PID_nav.x_now - PID_nav.x_set) < PID_nav.err_cir_x 
 					&& fabs(PID_nav.y_now - PID_nav.y_set) < PID_nav.err_cir_y)
 				{
@@ -264,12 +303,88 @@ void Task_Flow_Entry(void const * argument)
 				Vision_Ring_Correction(g_ring_err_x,g_ring_err_y,g_ring_err_yaw);
 				break;
 			
-			case 20:
+			case 20: //放第三个物料
 				Place_Ground_Handler();
 				task_flow.task_process++;		
 				break;
 
-			case 21:
+			case 21: //设定放置的第一个物料坐标
+				osDelay(1000);
+				Pick_Roughing_Area_Point_Handler(); 
+				task_flow.task_process++;
+				break;
+			
+			case 22: //到达第一个物料坐标
+				if(fabs(PID_nav.x_now - PID_nav.x_set) < 3.0f 
+					&& fabs(PID_nav.y_now - PID_nav.y_set) < 3.0f)
+				{
+					task_flow.task_process++;
+				}				
+				break;
+				
+			case 23: //取第一个地面物料
+				Pick_Ground_Handler();
+				task_flow.task_process++;	
+				break;
+			
+			case 24: //设定放置的第二个物料坐标
+				Pick_Roughing_Area_Point_Handler(); 
+				task_flow.task_process++;
+				break;
+			
+			case 25: //到达第二个物料坐标
+				if(fabs(PID_nav.x_now - PID_nav.x_set) < 3.0f 
+					&& fabs(PID_nav.y_now - PID_nav.y_set) < 3.0f)
+				{
+					task_flow.task_process++;
+				}				
+				break;
+				
+			case 26: //取第二个地面物料
+				Pick_Ground_Handler();
+				task_flow.task_process++;	
+				break;
+			
+			case 27: //设定放置的第三个物料坐标
+				Pick_Roughing_Area_Point_Handler(); 
+				task_flow.task_process++;				
+				break;
+
+			case 28: //到达第三个物料坐标
+				if(fabs(PID_nav.x_now - PID_nav.x_set) < 3.0f 
+					&& fabs(PID_nav.y_now - PID_nav.y_set) < 3.0f)
+				{
+					task_flow.task_process++;
+				}				
+				break;
+				
+			case 29: //取第三个地面物料
+				Pick_Ground_Handler();
+				task_flow.task_process++;	
+				break;
+			
+			case 30: //前往转角
+				PID_nav.x_set = 1850.0f;
+				PID_nav.y_set = 1800.0f;
+				PID_nav.yaw_set = 90.0f;		
+			
+				OD_Set_Input_Pos(OD_AXIS1,OD_READY_POS); //收回爪子 减小转动惯量
+				if(fabs(PID_nav.x_now - PID_nav.x_set) < 20.0f 
+					&& fabs(PID_nav.y_now - PID_nav.y_set) < 20.0f)
+				{
+					task_flow.task_process++;
+				}			
+				break;
+			
+			case 31: //发送色环识别命令
+				OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
+				HAL_UART_Transmit_IT(&huart2,g_vision_change02_cmd,sizeof(g_vision_change02_cmd));
+				//Place_Finishing_Area_Point_Handler(); //前往精加工区 粗定位
+				task_flow.task_process++;				
+				break;
+			
+			case 32:
+				
 				break;
 			
 			case 65:
@@ -280,8 +395,23 @@ void Task_Flow_Entry(void const * argument)
 				//GM65扫到码后会进入65+1的进程
 				break;
 			
-			case 71:
+			case 71: //测试 放1号
 				Place_Ground_1();
+				task_flow.task_process = 99;
+				break;
+			
+			case 81: //测试 取地面到1号
+				Pick_Ground_1();
+				task_flow.task_process = 99;
+				break;
+
+			case 82: //测试 取地面到2号
+				Pick_Ground_2();
+				task_flow.task_process = 99;
+				break;
+
+			case 83: //测试 取地面到3号
+				Pick_Ground_3();
 				task_flow.task_process = 99;
 				break;
 			
@@ -305,6 +435,10 @@ void Task_Flow_Entry(void const * argument)
   /* USER CODE END Task_Flow_Entry */
 }
 
+/**
+ * @brief 串口屏刷新函数
+ * @param NULL
+ */
 void HMI_Update(void)
 {
 	static int i = 0;
@@ -344,23 +478,112 @@ void HMI_Update(void)
 	
 }
 
+
+/**
+ * @brief 放粗加工区物料导航点选择函数
+ * @param NULL
+ */
+void Place_Roughing_Area_Point_Handler(void)
+{
+	static int8_t place_cnt = 0;
+	
+	switch(place_order[place_cnt++])
+	{
+		case 1:
+			PID_nav.x_set = task_flow.roughing_area_pos.red_x;
+			PID_nav.y_set = task_flow.roughing_area_pos.red_y;
+			PID_nav.yaw_set = task_flow.roughing_area_pos.red_yaw;
+			break;
+		
+		case 2:
+			PID_nav.x_set = task_flow.roughing_area_pos.green_x;
+			PID_nav.y_set = task_flow.roughing_area_pos.green_y;
+			PID_nav.yaw_set = task_flow.roughing_area_pos.green_yaw;		
+			break;
+		
+		case 3:
+			PID_nav.x_set = task_flow.roughing_area_pos.blue_x;
+			PID_nav.y_set = task_flow.roughing_area_pos.blue_y;
+			PID_nav.yaw_set = task_flow.roughing_area_pos.blue_yaw;
+			break;
+		
+		default:
+			break;
+	}
+}
+
+/**
+ * @brief 取粗加工区物料导航点选择函数
+ * @param NULL
+ */
+void Pick_Roughing_Area_Point_Handler(void)
+{
+	static int8_t pick_cnt = 0;
+	
+	switch(place_order[pick_cnt++])
+	{
+		case 1:
+			PID_nav.x_set = task_flow.roughing_area_pos.red_x;
+			PID_nav.y_set = task_flow.roughing_area_pos.red_y;
+			PID_nav.yaw_set = task_flow.roughing_area_pos.red_yaw;
+			break;
+		
+		case 2:
+			PID_nav.x_set = task_flow.roughing_area_pos.green_x;
+			PID_nav.y_set = task_flow.roughing_area_pos.green_y;
+			PID_nav.yaw_set = task_flow.roughing_area_pos.green_yaw;		
+			break;
+		
+		case 3:
+			PID_nav.x_set = task_flow.roughing_area_pos.blue_x;
+			PID_nav.y_set = task_flow.roughing_area_pos.blue_y;
+			PID_nav.yaw_set = task_flow.roughing_area_pos.blue_yaw;
+			break;
+		
+		default:
+			break;
+	}
+}
 //
 //**************************************************
 //              **取地面物料**到载物盘上
 //**************************************************
 //
+void Pick_Ground_Handler(void)
+{
+	static int8_t pick_cnt = 0;
+	
+	switch(place_order[pick_cnt++])
+	{
+		case 1:
+			Pick_Ground_1();
+			break;
+		
+		case 2:
+			Pick_Ground_2();
+			break;
+		
+		case 3:
+			Pick_Ground_3();
+			break;
+		
+		default:
+			break;
+	}
+	
+}
 void Pick_Ground_1(void)
 {
 	Servo_Ctrl('B',CLAW_ANGLE_OPEN);
 	Servo_Ctrl('C',CARRIER_1_ANGLE);
 	SetPos(BELT_MOTOR_ID,PICK_GROUND_HEIGHT);
-	osDelay(800);
+	osDelay(1500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_CATCH);
 	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(500);
+	osDelay(1000);
 	
 	OD_Set_Input_Pos(OD_AXIS1,PM_ANGLE_1);
 	osDelay(1000);
@@ -372,6 +595,8 @@ void Pick_Ground_1(void)
 	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
+	osDelay(500);
+	
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
 	osDelay(1000);
 }
@@ -382,13 +607,13 @@ void Pick_Ground_2(void)
 	Servo_Ctrl('B',CLAW_ANGLE_OPEN);
 	Servo_Ctrl('C',CARRIER_2_ANGLE);
 	SetPos(BELT_MOTOR_ID,PICK_GROUND_HEIGHT);
-	osDelay(800);
+	osDelay(1500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_CATCH);
 	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(500);
+	osDelay(1000);
 	
 	OD_Set_Input_Pos(OD_AXIS1,PM_ANGLE_2);
 	osDelay(1000);
@@ -400,6 +625,8 @@ void Pick_Ground_2(void)
 	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
+	osDelay(500);
+	
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
 	osDelay(1000);
 }
@@ -409,13 +636,13 @@ void Pick_Ground_3(void)
 	Servo_Ctrl('B',CLAW_ANGLE_OPEN);
 	Servo_Ctrl('C',CARRIER_3_ANGLE);
 	SetPos(BELT_MOTOR_ID,PICK_GROUND_HEIGHT);
-	osDelay(800);
+	osDelay(1500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_CATCH);
 	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(500);
+	osDelay(1000);
 	
 	OD_Set_Input_Pos(OD_AXIS1,PM_ANGLE_3);
 	osDelay(1000);
@@ -427,6 +654,8 @@ void Pick_Ground_3(void)
 	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
+	osDelay(500);
+	
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
 	osDelay(1000);
 }
@@ -445,27 +674,74 @@ void Place_Ground_Handler(void)
 	switch(place_order[place_cnt++])
 	{
 		case 1:
-			Place_Ground_1();
+			Place_Ground_1(); //1为红
+			//记录当前坐标到粗加工区坐标结构体
+			task_flow.roughing_area_pos.red_x = PID_nav.x_now;
+			task_flow.roughing_area_pos.red_y = PID_nav.y_now;
+			task_flow.roughing_area_pos.red_yaw = PID_nav.yaw_now;
 			break;
 		
 		case 2:
-			Place_Ground_2();
+			Place_Ground_2(); //2为绿
+			//记录当前坐标到粗加工区坐标结构体
+			task_flow.roughing_area_pos.green_x = PID_nav.x_now;
+			task_flow.roughing_area_pos.green_y = PID_nav.y_now;
+			task_flow.roughing_area_pos.green_yaw = PID_nav.yaw_now;
 			break;
 		
 		case 3:
-			Place_Ground_3();
+			Place_Ground_3(); //3为蓝
+			//记录当前坐标到粗加工区坐标结构体
+			task_flow.roughing_area_pos.blue_x = PID_nav.x_now;
+			task_flow.roughing_area_pos.blue_y = PID_nav.y_now;
+			task_flow.roughing_area_pos.blue_yaw = PID_nav.yaw_now;
 			break;
 		
 		default:
 			break;
 	}
+	
+	if(place_cnt == 1) //第一次放置后 根据第一次放下的位置 刷新剩下两个位置的坐标
+	{
+		switch(place_order[0]) //读第一个放的是什么颜色的
+		{
+			case 1: //如果放的是红色
+				task_flow.roughing_area_pos.green_x = task_flow.roughing_area_pos.red_x;
+				task_flow.roughing_area_pos.green_y = task_flow.roughing_area_pos.red_y + 150.0f;
+				task_flow.roughing_area_pos.green_yaw = task_flow.roughing_area_pos.red_yaw;		
+				task_flow.roughing_area_pos.blue_x = task_flow.roughing_area_pos.red_x;;
+				task_flow.roughing_area_pos.blue_y = task_flow.roughing_area_pos.red_y + 300.0f;
+				task_flow.roughing_area_pos.blue_yaw = task_flow.roughing_area_pos.red_yaw;			
+				break;
+			
+			case 2: //如果放的是绿色
+				task_flow.roughing_area_pos.red_x = task_flow.roughing_area_pos.green_x;
+				task_flow.roughing_area_pos.red_y = task_flow.roughing_area_pos.green_y - 150.0f;
+				task_flow.roughing_area_pos.red_yaw = task_flow.roughing_area_pos.green_yaw;		
+				task_flow.roughing_area_pos.blue_x = task_flow.roughing_area_pos.green_x;;
+				task_flow.roughing_area_pos.blue_y = task_flow.roughing_area_pos.green_y + 150.0f;
+				task_flow.roughing_area_pos.blue_yaw = task_flow.roughing_area_pos.green_yaw;			
+				break;				
+			
+			case 3: //如果放的是蓝色
+				task_flow.roughing_area_pos.red_x = task_flow.roughing_area_pos.blue_x;
+				task_flow.roughing_area_pos.red_y = task_flow.roughing_area_pos.blue_y - 300.0f;
+				task_flow.roughing_area_pos.red_yaw = task_flow.roughing_area_pos.blue_yaw;		
+				task_flow.roughing_area_pos.green_x = task_flow.roughing_area_pos.blue_x;;
+				task_flow.roughing_area_pos.green_y = task_flow.roughing_area_pos.blue_y - 150.0f;
+				task_flow.roughing_area_pos.green_yaw = task_flow.roughing_area_pos.blue_yaw;			
+				break;
+
+			default:
+				break;
+		}
+	}
 }
 void Place_Ground_1(void)
 {
-	Servo_Ctrl('B',CLAW_ANGLE_MOPEN);
+	Servo_Ctrl('B',CLAW_ANGLE_SOPEN);
 	Servo_Ctrl('C',CARRIER_1_ANGLE);
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(1000);
 	
 	OD_Set_Input_Pos(OD_AXIS1,PICK_PM_ANGLE_1);
 	osDelay(1000);
@@ -474,9 +750,11 @@ void Place_Ground_1(void)
 	osDelay(500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_CATCH);
-	osDelay(300);
+	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
+	osDelay(500);
+	
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
 	osDelay(1000);
 	
@@ -484,18 +762,17 @@ void Place_Ground_1(void)
 	osDelay(1500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_OPEN);
-	osDelay(500);
+	osDelay(700);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(1000);
+	osDelay(500);
 }
 
 void Place_Ground_2(void)
 {
-	Servo_Ctrl('B',CLAW_ANGLE_MOPEN);
+	Servo_Ctrl('B',CLAW_ANGLE_SOPEN);
 	Servo_Ctrl('C',CARRIER_2_ANGLE);
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(1000);
 	
 	OD_Set_Input_Pos(OD_AXIS1,PICK_PM_ANGLE_2);
 	osDelay(1000);
@@ -504,9 +781,11 @@ void Place_Ground_2(void)
 	osDelay(500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_CATCH);
-	osDelay(300);
+	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
+	osDelay(500);
+	
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
 	osDelay(1000);
 	
@@ -514,18 +793,17 @@ void Place_Ground_2(void)
 	osDelay(1500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_OPEN);
-	osDelay(500);
+	osDelay(700);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(1000);	
+	osDelay(500);
 }
 
 void Place_Ground_3(void)
 {
-	Servo_Ctrl('B',CLAW_ANGLE_MOPEN);
+	Servo_Ctrl('B',CLAW_ANGLE_SOPEN);
 	Servo_Ctrl('C',CARRIER_3_ANGLE);
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(1000);
 	
 	OD_Set_Input_Pos(OD_AXIS1,PICK_PM_ANGLE_3);
 	osDelay(1000);
@@ -534,9 +812,11 @@ void Place_Ground_3(void)
 	osDelay(500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_CATCH);
-	osDelay(300);
+	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
+	osDelay(500);
+	
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
 	osDelay(1000);
 	
@@ -544,10 +824,10 @@ void Place_Ground_3(void)
 	osDelay(1500);
 	
 	Servo_Ctrl('B',CLAW_ANGLE_OPEN);
-	osDelay(500);
+	osDelay(700);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(1000);	
+	osDelay(500);
 }
 
 
@@ -567,7 +847,7 @@ void Pick_Turntable_1(void)
 	osDelay(500);
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
-	osDelay(500);
+	osDelay(1500);
 	
 	OD_Set_Input_Pos(OD_AXIS1,PM_ANGLE_1);
 	osDelay(1000);
@@ -580,7 +860,7 @@ void Pick_Turntable_1(void)
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
-	osDelay(1000);
+	osDelay(500);
 }
 
 //从转盘上取第一个物料到载物盘上，然后回到初始位置
@@ -608,7 +888,7 @@ void Pick_Turntable_2(void)
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
-	osDelay(1000);
+	osDelay(500);
 }
 
 //从转盘上取第一个物料到载物盘上，然后回到初始位置
@@ -636,7 +916,7 @@ void Pick_Turntable_3(void)
 	
 	SetPos(BELT_MOTOR_ID,VERTEX_HEIGHT);
 	OD_Set_Input_Pos(OD_AXIS1,OD_START_POS);
-	osDelay(1000);
+	osDelay(500);
 }
 
 /**
@@ -674,8 +954,8 @@ void Vision_Ring_Correction(int vision_x, int vision_y, float vision_yaw)
 	const static int desired_x = 11; //OD_START_POS取0.4406
 	const static int desired_y = -11;
 	const static float desired_yaw = 0; 
-	const static int allowed_err = 2; //允许误差区间3，即X可取[8,14]，Y[-8,-14]
-	const static float allowed_yaw_err = 1.0f;
+	const static int allowed_err = 2; //允许误差区间2，即X可取[9,13]，Y[-9,-11]
+	const static float allowed_yaw_err = 1.1f;
 	
 	int err_x = vision_x - desired_x;
 	int err_y = vision_y - desired_y;
@@ -723,7 +1003,7 @@ void Vision_Ring_Correction(int vision_x, int vision_y, float vision_yaw)
 			start_watchdog_time = HAL_GetTick();
 		}
 		
-		if(HAL_GetTick() - start_watchdog_time >= 2000) //卡死超过2秒 重新设定基准值
+		if(HAL_GetTick() - start_watchdog_time >= 500) //卡死超过1秒 重新设定基准值
 		{
 			g_pd_base_yaw = PID_nav.yaw_now;
 		}
@@ -756,7 +1036,7 @@ void Vision_Ring_Correction(int vision_x, int vision_y, float vision_yaw)
 				start_watchdog_time = HAL_GetTick();
 			}
 			
-			if(HAL_GetTick() - start_watchdog_time >= 2000) //卡死超过2秒 重新设定基准值
+			if(HAL_GetTick() - start_watchdog_time >= 500) //卡死超过1秒 重新设定基准值
 			{
 				g_pd_base_y = PID_nav.y_now;
 			}
@@ -786,7 +1066,7 @@ void Vision_Ring_Correction(int vision_x, int vision_y, float vision_yaw)
 				start_watchdog_time = HAL_GetTick();
 			}
 			
-			if(HAL_GetTick() - start_watchdog_time >= 2000) //卡死超过2秒 重新设定基准值
+			if(HAL_GetTick() - start_watchdog_time >= 500) //卡死超过1秒 重新设定基准值
 			{
 				g_pd_base_x = PID_nav.x_now;
 			}			

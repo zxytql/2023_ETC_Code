@@ -35,7 +35,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define START_ROCKERKEY_TASK_SIZE 120
+#define START_ROCKERKEY_TASK_PRIO osPriorityHigh
 
+uint16_t START_FLAG = 0;
+TaskHandle_t Start_RockerKey_Task_Handler;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -57,7 +61,7 @@ osThreadId Task_FlowHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-
+void Start_RockerKey_Task(void *pvParameters);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
@@ -142,6 +146,12 @@ void MX_FREERTOS_Init(void) {
   Task_FlowHandle = osThreadCreate(osThread(Task_Flow), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
+	xTaskCreate(	(TaskFunction_t) 	Start_RockerKey_Task,
+								(const char *)   	"Start_RockerKey_Task",
+								(uint16_t)				START_ROCKERKEY_TASK_SIZE,
+								(void *)					NULL,
+								(UBaseType_t)			START_ROCKERKEY_TASK_PRIO,
+								(TaskHandle_t *)	&Start_RockerKey_Task_Handler);
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
@@ -276,5 +286,17 @@ __weak void Task_Flow_Entry(void const * argument)
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-
+void Start_RockerKey_Task(void *pvParameters)
+{
+	while(1)
+	{
+		if(HAL_GPIO_ReadPin(ROCKER_KEY_GPIO_Port,ROCKER_KEY_Pin) == GPIO_PIN_RESET)
+		{
+			osDelay(50);
+			START_FLAG = 1;
+			vTaskDelete(NULL);
+		}
+		osDelay(20);
+	}
+}
 /* USER CODE END Application */
