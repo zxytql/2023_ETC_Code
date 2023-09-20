@@ -81,8 +81,8 @@ void DriverInit(int i, int motor_type, int unit_mode)
         Driver[i].posCtrl.kp = POS_KP_3508;
         Driver[i].homingMode.current = 0.8f;
 
-        Driver[i].velCtrl.acc = 1000.0f;
-        Driver[i].velCtrl.dec = 1000.0f;
+        Driver[i].velCtrl.acc = 500.0f;
+        Driver[i].velCtrl.dec = 500.0f;
         Driver[i].velCtrl.desiredVel[CMD] = 0.0f;
         Driver[i].posCtrl.acc = Driver[i].velCtrl.dec;
         Driver[i].posCtrl.posVel = 300.0f;

@@ -63,9 +63,9 @@ void Ops_Coordinate_Trans(ops_data_t *ops, PID_nav_t *PID_nav)
 void PID_Nav_Init(PID_nav_t *pid_nav, fzy_pid_t *fzy_ptr_x, fzy_pid_t *fzy_ptr_y, fzy_pid_t *fzy_ptr_w, fzy_pid_t *fzy_ptr_v)
 {
 	//             ptr         e_down  e_up           ec_down  ec_up  kp_d kp_up               ki             kd       i_l                  out_limit 
-	fuzzy_init(fzy_ptr_x,-250.0f, 250.0f, -100.0f, 100.0f, 15.0f / 1000.0f, 18.0f / 1000.0f, 0.0f,0.0f,  12.0f / 1000.0f,15.0f / 1000.0f, 0.0f, 4000.0f / 1000.0f);
+	fuzzy_init(fzy_ptr_x,-250.0f, 250.0f, -100.0f, 100.0f, 15.0f / 1000.0f, 18.0f / 1000.0f, 0.0f,0.0f,  12.0f / 1000.0f,15.0f / 1000.0f, 0.0f, 3000.0f / 1000.0f);
 	fuzzy_init(fzy_ptr_w,-250.0f, 250.0f, -100.0f, 100.0f, 15.0f, 18.0f, 1.0f,2.0f,  12.0f,15.0f, 10.0f, 50.0f); //航向角不需要转换倍率
-	fuzzy_init(fzy_ptr_y,-250.0f, 250.0f, -100.0f, 100.0f, 15.0f / 1000.0f, 18.0f / 1000.0f, 0.0f,0.0f,  12.0f / 1000.0f,15.0f / 1000.0f, 0.0f, 4000.0f / 1000.0f);    
+	fuzzy_init(fzy_ptr_y,-250.0f, 250.0f, -100.0f, 100.0f, 15.0f / 1000.0f, 18.0f / 1000.0f, 0.0f,0.0f,  12.0f / 1000.0f,15.0f / 1000.0f, 0.0f, 3000.0f / 1000.0f);    
 	fuzzy_init(fzy_ptr_v,-250.0f, 250.0f, -100.0f, 100.0f, 15.0f / 1000.0f, 18.0f / 1000.0f, 0.0f,0.0f,  12.0f / 1000.0f,15.0f / 1000.0f, 0.0f, 500.0f / 1000.0f);   
 	//1000是将m -> mm的倍率
 
